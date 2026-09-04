@@ -19,6 +19,9 @@ build/
 .firebase/
 firebase-debug.log*
 firestore-debug.log*
+serviceAccountKey*.json
+*serviceAccount*.json
+*credentials*.json
 
 # Testing & Coverage
 coverage/

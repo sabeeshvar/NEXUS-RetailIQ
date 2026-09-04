@@ -65,6 +65,40 @@ export class DataRepository {
   }
 
   /**
+   * Fetch live collections from Cloud Firestore and synchronize cache
+   */
+  public static async fetchFromFirestore(): Promise<boolean> {
+    if (!isConfigured || !db) return false;
+    try {
+      console.log('[NEXUS RetailIQ] Querying live Cloud Firestore collections...');
+      const storesSnap = await getDocs(collection(db, 'stores'));
+      const productsSnap = await getDocs(collection(db, 'products'));
+      const inventorySnap = await getDocs(collection(db, 'inventory'));
+      const salesSnap = await getDocs(collection(db, 'sales'));
+
+      if (!storesSnap.empty && !productsSnap.empty) {
+        const stores = storesSnap.docs.map(d => d.data() as Store);
+        const products = productsSnap.docs.map(d => d.data() as Product);
+        const inventory = inventorySnap.docs.map(d => d.data() as InventoryRecord);
+        const sales = salesSnap.docs.map(d => d.data() as Sale);
+
+        localStorage.setItem(STORAGE_KEYS.STORES, JSON.stringify(stores));
+        localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(products));
+        localStorage.setItem(STORAGE_KEYS.INVENTORY, JSON.stringify(inventory));
+        if (sales.length > 0) {
+          localStorage.setItem(STORAGE_KEYS.SALES, JSON.stringify(sales));
+        }
+        notifyChange();
+        console.log('[NEXUS RetailIQ] Live Cloud Firestore sync complete.');
+        return true;
+      }
+    } catch (err) {
+      console.warn('[NEXUS RetailIQ] Firestore read warning (falling back to cache):', err);
+    }
+    return false;
+  }
+
+  /**
    * Load Demo Data immediately into localStorage and Firestore (if connected)
    */
   public static async loadDemoData(): Promise<void> {

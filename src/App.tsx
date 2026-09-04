@@ -14,11 +14,15 @@ import { SettingsPage } from './pages/SettingsPage';
 import { DataRepository } from './services/dataRepository';
 
 export const App: React.FC = () => {
-  // Auto-initialize demo data on first visit if repository is empty
+  // Synchronize with Cloud Firestore or initialize demo data
   useEffect(() => {
-    if (!DataRepository.hasData()) {
-      DataRepository.loadDemoData();
-    }
+    const initData = async () => {
+      const fetched = await DataRepository.fetchFromFirestore();
+      if (!fetched && !DataRepository.hasData()) {
+        await DataRepository.loadDemoData();
+      }
+    };
+    initData();
   }, []);
 
   return (
