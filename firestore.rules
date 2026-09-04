@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        request.auth.token.role == 'admin';
+    }
+
+    // Public read for demo / evaluation; authenticated write
+    match /stores/{storeId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    match /inventory/{inventoryId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    match /sales/{saleId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    match /alerts/{alertId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+    }
+
+    // Health check collection for verification probes
+    match /_nexus_health_check/{docId} {
+      allow read, write: if true;
+    }
+  }
+}
