@@ -2,12 +2,6 @@ import React from 'react';
 import { useExplain } from '../components/layout/AppLayout';
 import {
   Store as StoreIcon,
-  TrendingUp,
-  Boxes,
-  AlertOctagon,
-  ArrowUpRight,
-  ArrowDownRight,
-  CheckCircle2,
   ChevronRight,
 } from 'lucide-react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
@@ -55,11 +49,11 @@ export const StoresPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Comparison Chart */}
-      <div className="p-6 rounded-2xl bg-surface-900 border border-slate-800">
+      {/* Comparison Chart in Neumorphic Card */}
+      <div className="p-6 rounded-2xl neu-card">
         <h3 className="text-base font-bold text-white mb-1">Today's Revenue Across Stores</h3>
         <p className="text-xs text-slate-400 mb-4">Point-of-sale volume recorded today across retail branches (₹)</p>
-        <div className="h-64 w-full">
+        <div className="h-64 w-full p-2 neu-sunken rounded-xl">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
               <XAxis dataKey="name" stroke="#64748b" fontSize={11} tickLine={false} />
@@ -71,7 +65,7 @@ export const StoresPage: React.FC = () => {
                 tickFormatter={(val) => `₹${(val / 1000).toFixed(0)}k`}
               />
               <Tooltip
-                contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '12px', fontSize: '12px' }}
+                contentStyle={{ backgroundColor: '#0a0e17', borderColor: '#1e293b', borderRadius: '12px', fontSize: '12px' }}
                 formatter={(val: any) => [`₹${Number(val).toLocaleString('en-IN')}`, "Today's Revenue"]}
               />
               <Bar dataKey="todayRevenue" fill="#6366f1" radius={[8, 8, 0, 0]} />
@@ -80,19 +74,19 @@ export const StoresPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Store Cards */}
+      {/* Store Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {storeStats.map((stat) => (
           <div
             key={stat.store.id}
-            className="p-5 rounded-2xl bg-surface-900 border border-slate-800 hover:border-brand-500/50 transition-all flex flex-col justify-between"
+            className="p-5 rounded-2xl neu-card flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between">
-                <div className="p-2 rounded-xl bg-brand-500/10 border border-brand-500/30 text-brand-400">
+                <div className="p-2.5 rounded-xl neu-sunken text-brand-400">
                   <StoreIcon className="w-4 h-4" />
                 </div>
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 shadow-[inset_1px_1px_2px_#060910]">
                   Active Branch
                 </span>
               </div>
@@ -101,31 +95,31 @@ export const StoresPage: React.FC = () => {
               <p className="text-xs text-slate-400 mt-0.5">{stat.store.location}</p>
 
               <div className="mt-4 space-y-2.5 text-xs font-mono">
-                <div className="flex items-center justify-between p-2.5 bg-surface-950 rounded-xl border border-slate-800/80">
+                <div className="flex items-center justify-between p-2.5 neu-sunken rounded-xl">
                   <span className="text-slate-400 font-sans">Today's Revenue:</span>
                   <span className="font-bold text-white text-sm">
                     ₹{stat.todayRevenue.toLocaleString('en-IN')}
                   </span>
                 </div>
-                <div className="flex items-center justify-between p-2.5 bg-surface-950 rounded-xl border border-slate-800/80">
+                <div className="flex items-center justify-between p-2.5 neu-sunken rounded-xl">
                   <span className="text-slate-400 font-sans">30-Day Revenue:</span>
                   <span className="font-bold text-slate-200">
                     ₹{stat.total30dRevenue.toLocaleString('en-IN')}
                   </span>
                 </div>
-                <div className="flex items-center justify-between p-2.5 bg-surface-950 rounded-xl border border-slate-800/80">
+                <div className="flex items-center justify-between p-2.5 neu-sunken rounded-xl">
                   <span className="text-slate-400 font-sans">Stock Valuation:</span>
                   <span className="font-bold text-slate-200">
                     ₹{stat.inventoryValue.toLocaleString('en-IN')}
                   </span>
                 </div>
-                <div className="flex items-center justify-between p-2.5 bg-surface-950 rounded-xl border border-slate-800/80">
+                <div className="flex items-center justify-between p-2.5 neu-sunken rounded-xl">
                   <span className="text-slate-400 font-sans">Stockout Risks:</span>
                   <span className={`font-bold ${stat.stockoutRisks > 0 ? 'text-rose-400' : 'text-emerald-400'}`}>
                     {stat.stockoutRisks} SKUs
                   </span>
                 </div>
-                <div className="flex items-center justify-between p-2.5 bg-surface-950 rounded-xl border border-slate-800/80">
+                <div className="flex items-center justify-between p-2.5 neu-sunken rounded-xl">
                   <span className="text-slate-400 font-sans">Top Mover:</span>
                   <span className="font-sans text-[11px] text-brand-300 font-medium truncate max-w-[140px]">
                     {stat.topProductName}
@@ -136,7 +130,7 @@ export const StoresPage: React.FC = () => {
 
             <button
               onClick={() => setSelectedStoreId(stat.store.id)}
-              className="mt-5 w-full py-2 px-3 rounded-xl bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+              className="neu-btn mt-5 w-full py-2.5 px-3 rounded-xl text-slate-200 hover:text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer"
             >
               <span>Scope Dashboard to This Store</span>
               <ChevronRight className="w-4 h-4" />

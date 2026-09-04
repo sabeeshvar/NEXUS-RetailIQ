@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import { useExplain } from '../components/layout/AppLayout';
 import {
-  Bell,
   AlertOctagon,
   AlertTriangle,
   Info,
-  CheckCircle2,
   HelpCircle,
-  Clock,
-  ArrowUpRight,
-  ArrowDownRight,
-  Filter,
 } from 'lucide-react';
 import { AnalyticsEngine } from '../lib/analytics/engine';
 
@@ -51,15 +45,15 @@ export const AlertsPage: React.FC = () => {
         </div>
 
         {/* Severity Filter Pills */}
-        <div className="flex bg-surface-900 border border-slate-800 rounded-xl p-1 gap-1">
+        <div className="flex flex-wrap neu-sunken rounded-2xl p-1.5 gap-1.5">
           {(['ALL', 'CRITICAL', 'WARNING', 'INFO'] as const).map((sev) => (
             <button
               key={sev}
               onClick={() => setSeverityFilter(sev)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                 severityFilter === sev
-                  ? 'bg-brand-600 text-white shadow-sm'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'neu-btn-brand text-white'
+                  : 'neu-btn text-slate-400 hover:text-white'
               }`}
             >
               {sev}
@@ -69,9 +63,9 @@ export const AlertsPage: React.FC = () => {
       </div>
 
       {/* Alerts Feed */}
-      <div className="space-y-3">
+      <div className="space-y-4">
         {filteredAlerts.length === 0 ? (
-          <div className="p-8 text-center bg-surface-900 border border-slate-800 rounded-2xl text-slate-400 text-sm">
+          <div className="p-8 text-center neu-card rounded-2xl text-slate-400 text-sm">
             No alerts match the selected filter.
           </div>
         ) : (
@@ -100,25 +94,25 @@ export const AlertsPage: React.FC = () => {
             return (
               <div
                 key={alert.id}
-                className={`p-5 rounded-2xl bg-surface-900 border transition-all ${
+                className={`p-5 rounded-2xl transition-all ${
                   isReviewed
-                    ? 'opacity-60 border-slate-800'
+                    ? 'neu-card opacity-60'
                     : isCritical
-                    ? 'border-rose-500/40 bg-rose-500/5'
+                    ? 'neu-card-critical'
                     : isWarning
-                    ? 'border-amber-500/30 bg-amber-500/5'
-                    : 'border-blue-500/30 bg-blue-500/5'
+                    ? 'neu-card-warning'
+                    : 'neu-card'
                 }`}
               >
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3.5">
                     <div
-                      className={`p-2.5 rounded-xl shrink-0 mt-0.5 ${
+                      className={`p-3 rounded-2xl shrink-0 mt-0.5 neu-sunken ${
                         isCritical
-                          ? 'bg-rose-500/20 text-rose-400'
+                          ? 'text-rose-400'
                           : isWarning
-                          ? 'bg-amber-500/20 text-amber-400'
-                          : 'bg-blue-500/20 text-blue-400'
+                          ? 'text-amber-400'
+                          : 'text-blue-400'
                       }`}
                     >
                       {isCritical ? (
@@ -133,7 +127,7 @@ export const AlertsPage: React.FC = () => {
                     <div>
                       <div className="flex items-center gap-2">
                         <span
-                          className={`text-[10px] font-bold px-2 py-0.5 rounded-full border uppercase ${
+                          className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase shadow-[inset_1px_1px_2px_#060910] border ${
                             isCritical
                               ? 'bg-rose-500/20 text-rose-300 border-rose-500/40'
                               : isWarning
@@ -151,7 +145,7 @@ export const AlertsPage: React.FC = () => {
                       <h3 className="text-base font-bold text-white mt-1.5">{alert.title}</h3>
                       <p className="text-xs text-slate-300 mt-1 leading-relaxed">{alert.description}</p>
 
-                      <div className="mt-2.5 p-2.5 bg-surface-950/80 rounded-xl border border-slate-800/80 text-xs">
+                      <div className="mt-3 p-3 neu-sunken rounded-xl text-xs">
                         <strong className="text-brand-300 font-semibold">Recommended Action: </strong>
                         <span className="text-slate-200">{alert.recommendation}</span>
                       </div>
@@ -159,10 +153,10 @@ export const AlertsPage: React.FC = () => {
                   </div>
 
                   {/* Actions Right */}
-                  <div className="flex md:flex-col items-center md:items-end justify-between gap-2 shrink-0">
+                  <div className="flex md:flex-col items-center md:items-end justify-between gap-2.5 shrink-0">
                     <button
                       onClick={handleWhy}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-brand-500/10 hover:bg-brand-500/20 text-brand-300 text-xs font-bold border border-brand-500/30 transition-all cursor-pointer"
+                      className="neu-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-brand-400 hover:text-brand-300 text-xs font-bold cursor-pointer"
                     >
                       <HelpCircle className="w-3.5 h-3.5" />
                       <span>Why?</span>
@@ -170,10 +164,10 @@ export const AlertsPage: React.FC = () => {
 
                     <button
                       onClick={() => toggleReviewed(alert.id)}
-                      className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-colors cursor-pointer ${
+                      className={`neu-btn px-3 py-1.5 rounded-xl text-xs font-medium cursor-pointer ${
                         isReviewed
-                          ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
-                          : 'bg-slate-800 hover:bg-slate-700 text-slate-300'
+                          ? 'text-emerald-400 font-bold border border-emerald-500/40'
+                          : 'text-slate-300'
                       }`}
                     >
                       {isReviewed ? 'Reviewed ✓' : 'Mark Reviewed'}

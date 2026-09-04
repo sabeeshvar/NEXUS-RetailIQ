@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { useExplain } from '../components/layout/AppLayout';
 import { DataImporter, ImportValidationResult } from '../services/dataImporter';
 import {
-  FileSpreadsheet,
   UploadCloud,
   CheckCircle2,
   AlertOctagon,
   Database,
   RefreshCw,
-  FileText,
   Trash2,
   ArrowRight,
 } from 'lucide-react';
@@ -62,7 +60,7 @@ export const DataImportPage: React.FC = () => {
       </div>
 
       {/* Demo Data Quick Action Card */}
-      <div className="p-6 rounded-2xl bg-surface-900 border border-brand-500/30 shadow-glow-brand flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="p-6 rounded-2xl neu-card flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-brand-400 uppercase tracking-wider">
             <Database className="w-4 h-4" />
@@ -78,7 +76,7 @@ export const DataImportPage: React.FC = () => {
           <button
             onClick={loadDemo}
             disabled={isLoading}
-            className="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold shadow-md shadow-brand-900/40 transition-all cursor-pointer flex items-center gap-2"
+            className="neu-btn-brand px-5 py-2.5 rounded-xl text-xs font-bold cursor-pointer flex items-center gap-2"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin' : ''}`} />
             <span>{isLoading ? 'Generating Data...' : 'Load Full Demo Dataset'}</span>
@@ -88,7 +86,7 @@ export const DataImportPage: React.FC = () => {
             <button
               onClick={clearAll}
               title="Clear all stored data"
-              className="p-2.5 rounded-xl bg-slate-800 hover:bg-rose-500/20 text-slate-400 hover:text-rose-300 border border-slate-700 transition-all cursor-pointer"
+              className="neu-btn p-2.5 rounded-xl text-slate-400 hover:text-rose-300 cursor-pointer"
             >
               <Trash2 className="w-4 h-4" />
             </button>
@@ -97,11 +95,11 @@ export const DataImportPage: React.FC = () => {
       </div>
 
       {/* Manual CSV File Ingestion */}
-      <div className="p-6 rounded-2xl bg-surface-900 border border-slate-800 space-y-4">
+      <div className="p-6 rounded-2xl neu-card space-y-4">
         <h3 className="text-base font-bold text-white">Import Custom Retail Data (CSV)</h3>
         
         {/* Entity Type Picker */}
-        <div className="flex gap-2">
+        <div className="flex neu-sunken rounded-2xl p-1 gap-1.5 w-fit">
           {(['products', 'sales', 'inventory'] as const).map((type) => (
             <button
               key={type}
@@ -109,10 +107,10 @@ export const DataImportPage: React.FC = () => {
                 setImportType(type);
                 setValidationResult(null);
               }}
-              className={`px-3 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 importType === type
-                  ? 'bg-brand-600 text-white shadow-sm'
-                  : 'bg-surface-950 text-slate-400 hover:text-white border border-slate-800'
+                  ? 'neu-btn-brand text-white'
+                  : 'neu-btn text-slate-400 hover:text-white'
               }`}
             >
               {type}
@@ -121,7 +119,7 @@ export const DataImportPage: React.FC = () => {
         </div>
 
         {/* Upload Dropzone */}
-        <label className="border-2 border-dashed border-slate-700 hover:border-brand-500 rounded-2xl p-8 flex flex-col items-center justify-center text-center cursor-pointer transition-colors bg-surface-950/40">
+        <label className="border-2 border-dashed border-slate-700/60 hover:border-brand-500 rounded-2xl p-8 flex flex-col items-center justify-center text-center cursor-pointer transition-colors neu-sunken">
           <UploadCloud className="w-10 h-10 text-brand-400 mb-2" />
           <span className="text-sm font-bold text-white">Click to select {importType}.csv</span>
           <span className="text-xs text-slate-400 mt-1">Supports standard UTF-8 CSV exports from retail POS systems</span>
@@ -134,7 +132,7 @@ export const DataImportPage: React.FC = () => {
         </label>
 
         {importStatus && (
-          <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-xs text-emerald-300 flex items-center gap-2">
+          <div className="p-3.5 neu-card-success rounded-xl text-xs text-emerald-300 flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4" />
             <span>{importStatus}</span>
           </div>
@@ -142,7 +140,7 @@ export const DataImportPage: React.FC = () => {
 
         {/* Validation Results Box */}
         {validationResult && (
-          <div className="p-5 rounded-2xl bg-surface-950 border border-slate-800 space-y-4 font-mono">
+          <div className="p-5 rounded-2xl neu-sunken space-y-4 font-mono">
             <div className="flex items-center justify-between font-sans">
               <div>
                 <span className="text-xs text-slate-400">File Ingested:</span>
@@ -180,7 +178,7 @@ export const DataImportPage: React.FC = () => {
               <button
                 onClick={handleCommit}
                 disabled={validationResult.validRows === 0}
-                className="px-5 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 disabled:opacity-40 text-white text-xs font-bold transition-all cursor-pointer flex items-center gap-2"
+                className="neu-btn-brand px-5 py-2 rounded-xl disabled:opacity-40 text-white text-xs font-bold cursor-pointer flex items-center gap-2"
               >
                 <span>Commit {validationResult.validRows} Valid Records</span>
                 <ArrowRight className="w-3.5 h-3.5" />

@@ -106,16 +106,16 @@ export const CopilotPage: React.FC = () => {
 
   return (
     <div className="flex flex-col h-[calc(100vh-8rem)] max-w-5xl mx-auto space-y-4 animate-in fade-in duration-200">
-      {/* Copilot Header */}
-      <div className="flex items-center justify-between p-4 bg-surface-900 border border-slate-800 rounded-2xl">
+      {/* Neumorphic Copilot Header */}
+      <div className="flex items-center justify-between p-4 neu-card rounded-2xl">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white shadow-glow-brand">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-700 flex items-center justify-center text-white shadow-[4px_4px_10px_#060910,-4px_-4px_10px_#18243a]">
             <Sparkles className="w-5 h-5" />
           </div>
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-base font-extrabold text-white">RetailIQ Copilot</h1>
-              <span className="px-2 py-0.5 text-[10px] font-bold bg-emerald-500/20 text-emerald-300 rounded-full border border-emerald-500/30 flex items-center gap-1">
+              <span className="px-2.5 py-0.5 text-[10px] font-bold bg-emerald-500/20 text-emerald-300 rounded-full border border-emerald-500/30 shadow-[inset_1px_1px_3px_#060910] flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 Strict Grounding Active
               </span>
@@ -132,8 +132,8 @@ export const CopilotPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Message History Feed */}
-      <div className="flex-1 overflow-y-auto space-y-4 p-4 rounded-2xl bg-surface-900/40 border border-slate-800/80">
+      {/* Message History Feed in Sunken Well */}
+      <div className="flex-1 overflow-y-auto space-y-4 p-5 rounded-2xl neu-sunken">
         {messages.map((msg) => {
           const isUser = msg.role === 'user';
           return (
@@ -143,10 +143,10 @@ export const CopilotPage: React.FC = () => {
             >
               {/* Avatar */}
               <div
-                className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs shrink-0 font-bold ${
+                className={`w-9 h-9 rounded-2xl flex items-center justify-center text-xs shrink-0 font-bold ${
                   isUser
-                    ? 'bg-slate-700 text-white'
-                    : 'bg-gradient-to-tr from-brand-600 to-indigo-600 text-white shadow-sm'
+                    ? 'neu-sunken text-slate-200 border border-slate-700/50'
+                    : 'bg-gradient-to-br from-brand-500 to-indigo-700 text-white shadow-[3px_3px_7px_#060910,-3px_-3px_7px_#18243a]'
                 }`}
               >
                 {isUser ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
@@ -154,10 +154,10 @@ export const CopilotPage: React.FC = () => {
 
               {/* Message Card */}
               <div
-                className={`p-4 rounded-2xl text-sm leading-relaxed border ${
+                className={`p-4 rounded-2xl text-sm leading-relaxed ${
                   isUser
-                    ? 'bg-brand-600 text-white border-brand-500/40 rounded-tr-none'
-                    : 'bg-surface-900 text-slate-200 border-slate-800 rounded-tl-none shadow-sm'
+                    ? 'neu-btn-brand text-white rounded-tr-none'
+                    : 'neu-card text-slate-200 rounded-tl-none'
                 }`}
               >
                 {/* Text Content */}
@@ -167,14 +167,14 @@ export const CopilotPage: React.FC = () => {
 
                 {/* Verified Numbers Grid (Assistant Only) */}
                 {!isUser && msg.numbers && msg.numbers.length > 0 && (
-                  <div className="mt-4 pt-3 border-t border-slate-800">
+                  <div className="mt-4 pt-3 border-t border-slate-800/80">
                     <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
                       <Calculator className="w-3 h-3 text-brand-400" />
                       Verified Ground Truth Metrics
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {msg.numbers.map((num, idx) => (
-                        <div key={idx} className="p-2.5 bg-surface-950 rounded-xl border border-slate-800/80 font-mono">
+                        <div key={idx} className="p-2.5 neu-sunken rounded-xl font-mono">
                           <div className="text-[11px] text-slate-400 font-sans">{num.label}</div>
                           <div className="text-xs font-bold text-white mt-0.5">{num.value}</div>
                           {num.context && (
@@ -188,7 +188,7 @@ export const CopilotPage: React.FC = () => {
 
                 {/* Evidence & Assumptions */}
                 {!isUser && msg.assumptions && msg.assumptions.length > 0 && (
-                  <div className="mt-3 text-[11px] text-slate-400 bg-surface-950/60 p-2.5 rounded-xl border border-slate-800/60">
+                  <div className="mt-3 text-[11px] text-slate-400 neu-sunken p-2.5 rounded-xl">
                     <strong className="text-slate-300 font-semibold block mb-1">Assumptions Used:</strong>
                     <ul className="list-disc pl-4 space-y-0.5">
                       {msg.assumptions.map((asmp, i) => (
@@ -203,7 +203,7 @@ export const CopilotPage: React.FC = () => {
                   <div className="mt-3 pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
                       <span
-                        className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
+                        className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-[inset_1px_1px_3px_#060910] border ${
                           msg.confidence === 'HIGH'
                             ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30'
                             : msg.confidence === 'INSUFFICIENT_DATA'
@@ -223,7 +223,7 @@ export const CopilotPage: React.FC = () => {
                     {msg.explanation && (
                       <button
                         onClick={() => openWhy(msg.explanation!)}
-                        className="inline-flex items-center gap-1 text-xs font-bold text-brand-400 hover:text-brand-300 bg-brand-500/10 hover:bg-brand-500/20 px-2.5 py-1 rounded-lg border border-brand-500/30 transition-all cursor-pointer"
+                        className="neu-btn inline-flex items-center gap-1 text-xs font-bold text-brand-400 hover:text-brand-300 px-3 py-1.5 rounded-xl cursor-pointer"
                       >
                         <HelpCircle className="w-3.5 h-3.5" />
                         <span>Why this calculation?</span>
@@ -238,7 +238,7 @@ export const CopilotPage: React.FC = () => {
 
         {/* Thinking Indicator */}
         {isThinking && (
-          <div className="flex gap-3 items-center text-xs text-brand-400 p-3 bg-surface-900 border border-slate-800 rounded-2xl w-fit">
+          <div className="flex gap-3 items-center text-xs text-brand-400 p-3 neu-card rounded-2xl w-fit">
             <RefreshCw className="w-4 h-4 animate-spin text-brand-400" />
             <span>Evaluating transaction ledgers & computing deterministic formulas...</span>
           </div>
@@ -252,12 +252,12 @@ export const CopilotPage: React.FC = () => {
         <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider px-1">
           Suggested Questions for Store Manager:
         </div>
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-2">
           {SUGGESTED_QUESTIONS.map((q, idx) => (
             <button
               key={idx}
               onClick={() => handleSend(q)}
-              className="text-xs px-3 py-1.5 rounded-xl bg-surface-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 transition-all cursor-pointer flex items-center gap-1.5"
+              className="neu-btn text-xs px-3 py-1.5 rounded-xl text-slate-300 hover:text-white cursor-pointer flex items-center gap-1.5"
             >
               <span>{q}</span>
               <ArrowRight className="w-3 h-3 text-slate-500" />
@@ -267,7 +267,7 @@ export const CopilotPage: React.FC = () => {
       </div>
 
       {/* Input Box */}
-      <div className="flex items-center gap-2 p-2 bg-surface-900 border border-slate-800 rounded-2xl">
+      <div className="flex items-center gap-2 p-2 neu-card rounded-2xl">
         <input
           type="text"
           value={inputQuestion}
@@ -281,7 +281,7 @@ export const CopilotPage: React.FC = () => {
         <button
           onClick={() => handleSend()}
           disabled={!inputQuestion.trim() || isThinking}
-          className="p-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 disabled:opacity-40 text-white shadow-md shadow-brand-900/30 transition-all cursor-pointer"
+          className="neu-btn-brand p-2.5 rounded-xl disabled:opacity-40 text-white cursor-pointer"
         >
           <Send className="w-4 h-4" />
         </button>

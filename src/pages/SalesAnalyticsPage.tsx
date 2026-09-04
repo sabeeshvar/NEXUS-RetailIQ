@@ -1,16 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useExplain } from '../components/layout/AppLayout';
 import {
-  TrendingUp,
-  BarChart3,
-  PieChart as PieIcon,
-  Calendar,
-  Filter,
-  ArrowUpRight,
-  ArrowDownRight,
-  Sparkles,
-} from 'lucide-react';
-import {
   ResponsiveContainer,
   AreaChart,
   Area,
@@ -22,14 +12,13 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
 } from 'recharts';
 
 const CATEGORY_COLORS = ['#6366f1', '#10b981', '#f59e0b', '#ec4899', '#8b5cf6', '#06b6d4', '#f97316', '#14b8a6'];
 
 export const SalesAnalyticsPage: React.FC = () => {
   const { retailData } = useExplain();
-  const { sales, products, stores, selectedStoreId, setSelectedStoreId } = retailData;
+  const { sales, products, selectedStoreId } = retailData;
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [timeRange, setTimeRange] = useState<'7d' | '30d' | '90d'>('30d');
@@ -112,15 +101,15 @@ export const SalesAnalyticsPage: React.FC = () => {
         {/* Filter Controls */}
         <div className="flex flex-wrap items-center gap-2">
           {/* Time range toggle */}
-          <div className="flex bg-surface-900 border border-slate-800 rounded-xl p-1">
+          <div className="flex neu-sunken rounded-2xl p-1 gap-1">
             {(['7d', '30d', '90d'] as const).map((r) => (
               <button
                 key={r}
                 onClick={() => setTimeRange(r)}
-                className={`px-3 py-1 text-xs font-semibold rounded-lg transition-all ${
+                className={`px-3 py-1 text-xs font-semibold rounded-xl transition-all cursor-pointer ${
                   timeRange === r
-                    ? 'bg-brand-600 text-white shadow-sm'
-                    : 'text-slate-400 hover:text-white'
+                    ? 'neu-btn-brand text-white'
+                    : 'neu-btn text-slate-400 hover:text-white'
                 }`}
               >
                 {r.toUpperCase()}
@@ -132,11 +121,11 @@ export const SalesAnalyticsPage: React.FC = () => {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="bg-surface-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-200 focus:outline-none cursor-pointer"
+            className="neu-sunken rounded-xl px-3 py-1.5 text-xs text-slate-200 focus:outline-none cursor-pointer"
           >
-            <option value="all">All Categories</option>
+            <option value="all" className="bg-[#0e1420]">All Categories</option>
             {categories.map((c) => (
-              <option key={c} value={c}>
+              <option key={c} value={c} className="bg-[#0e1420]">
                 {c}
               </option>
             ))}
@@ -146,17 +135,17 @@ export const SalesAnalyticsPage: React.FC = () => {
 
       {/* Metric Mini-Strip */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="p-4 rounded-2xl bg-surface-900 border border-slate-800 font-mono">
+        <div className="p-4 rounded-2xl neu-card font-mono">
           <span className="text-xs text-slate-400 font-sans">Period Total Revenue</span>
           <div className="text-2xl font-bold text-white mt-1">₹{totalPeriodRevenue.toLocaleString('en-IN')}</div>
           <span className="text-[11px] text-slate-500 font-sans">Trailing {timeRange} window</span>
         </div>
-        <div className="p-4 rounded-2xl bg-surface-900 border border-slate-800 font-mono">
+        <div className="p-4 rounded-2xl neu-card font-mono">
           <span className="text-xs text-slate-400 font-sans">Period Units Sold</span>
           <div className="text-2xl font-bold text-brand-400 mt-1">{totalPeriodUnits.toLocaleString('en-IN')} units</div>
           <span className="text-[11px] text-slate-500 font-sans">Registered checkout items</span>
         </div>
-        <div className="p-4 rounded-2xl bg-surface-900 border border-slate-800 font-mono">
+        <div className="p-4 rounded-2xl neu-card font-mono">
           <span className="text-xs text-slate-400 font-sans">Daily Average Run-Rate</span>
           <div className="text-2xl font-bold text-emerald-400 mt-1">
             ₹{Math.round(totalPeriodRevenue / (chartData.length || 1)).toLocaleString('en-IN')}/day
@@ -166,14 +155,14 @@ export const SalesAnalyticsPage: React.FC = () => {
       </div>
 
       {/* Main Revenue & Unit Trends Chart */}
-      <div className="p-6 rounded-2xl bg-surface-900 border border-slate-800">
+      <div className="p-6 rounded-2xl neu-card">
         <div className="flex items-center justify-between mb-4">
           <div>
             <h3 className="text-base font-bold text-white">Daily Revenue & Volume Trajectory</h3>
             <p className="text-xs text-slate-400">Trailing day-by-day sales revenue (₹)</p>
           </div>
         </div>
-        <div className="h-72 w-full">
+        <div className="h-72 w-full p-2 neu-sunken rounded-xl">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={chartData} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
               <defs>
@@ -191,7 +180,7 @@ export const SalesAnalyticsPage: React.FC = () => {
                 tickFormatter={(val) => `₹${(val / 1000).toFixed(0)}k`}
               />
               <Tooltip
-                contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '12px', fontSize: '12px' }}
+                contentStyle={{ backgroundColor: '#0a0e17', borderColor: '#1e293b', borderRadius: '12px', fontSize: '12px' }}
                 formatter={(val: any) => [`₹${Number(val).toLocaleString('en-IN')}`, 'Revenue']}
               />
               <Area type="monotone" dataKey="revenue" stroke="#6366f1" strokeWidth={2.5} fill="url(#salesRev)" />
@@ -203,11 +192,11 @@ export const SalesAnalyticsPage: React.FC = () => {
       {/* Grid: Category Share & Top SKU Leaders */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Category Share */}
-        <div className="p-6 rounded-2xl bg-surface-900 border border-slate-800 flex flex-col justify-between">
+        <div className="p-6 rounded-2xl neu-card flex flex-col justify-between">
           <div>
             <h3 className="text-base font-bold text-white">Revenue by Category</h3>
             <p className="text-xs text-slate-400">Contribution split across merchandise categories</p>
-            <div className="h-64 w-full mt-4">
+            <div className="h-64 w-full mt-4 p-2 neu-sunken rounded-xl flex items-center justify-center">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -226,7 +215,7 @@ export const SalesAnalyticsPage: React.FC = () => {
                     ))}
                   </Pie>
                   <Tooltip
-                    contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '12px', fontSize: '12px' }}
+                    contentStyle={{ backgroundColor: '#0a0e17', borderColor: '#1e293b', borderRadius: '12px', fontSize: '12px' }}
                     formatter={(val: any) => [`₹${Number(val).toLocaleString('en-IN')}`, 'Revenue']}
                   />
                 </PieChart>
@@ -236,10 +225,10 @@ export const SalesAnalyticsPage: React.FC = () => {
         </div>
 
         {/* Top 8 Selling SKUs */}
-        <div className="p-6 rounded-2xl bg-surface-900 border border-slate-800">
+        <div className="p-6 rounded-2xl neu-card">
           <h3 className="text-base font-bold text-white">Top 8 SKUs by Revenue</h3>
           <p className="text-xs text-slate-400">Top revenue generating items in this period</p>
-          <div className="h-64 w-full mt-4">
+          <div className="h-64 w-full mt-4 p-2 neu-sunken rounded-xl">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={topSellingData} layout="vertical" margin={{ top: 5, right: 20, left: 40, bottom: 5 }}>
                 <XAxis
@@ -257,7 +246,7 @@ export const SalesAnalyticsPage: React.FC = () => {
                   tickFormatter={(val) => val.length > 16 ? `${val.slice(0, 16)}…` : val}
                 />
                 <Tooltip
-                  contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '12px', fontSize: '12px' }}
+                  contentStyle={{ backgroundColor: '#0a0e17', borderColor: '#1e293b', borderRadius: '12px', fontSize: '12px' }}
                   formatter={(val: any) => [`₹${Number(val).toLocaleString('en-IN')}`, 'Revenue']}
                 />
                 <Bar dataKey="revenue" fill="#6366f1" radius={[0, 6, 6, 0]} />

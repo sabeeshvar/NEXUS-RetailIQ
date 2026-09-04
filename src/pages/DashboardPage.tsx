@@ -12,7 +12,6 @@ import {
   ArrowDownRight,
   Sparkles,
   ChevronRight,
-  CheckCircle2,
   Database,
 } from 'lucide-react';
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip } from 'recharts';
@@ -30,25 +29,25 @@ export const DashboardPage: React.FC = () => {
   // Empty state handling
   if (!hasData) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center p-8 bg-surface-900/60 border border-slate-800 rounded-3xl">
-        <div className="w-16 h-16 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 mb-4 shadow-glow-brand">
+      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center p-8 neu-card-lg max-w-xl mx-auto my-12">
+        <div className="w-16 h-16 rounded-2xl bg-[#111827] shadow-[6px_6px_14px_#060910,-6px_-6px_14px_#182338] flex items-center justify-center text-brand-400 mb-4 border border-brand-500/20">
           <Database className="w-8 h-8" />
         </div>
         <h2 className="text-2xl font-extrabold text-white">No Retail Data Loaded Yet</h2>
         <p className="text-slate-400 max-w-md mt-2 text-sm">
           Load our realistic Indian retail demo dataset (3 stores, 24 products, 90 days of transactions) to evaluate stockout predictions, anomaly detection, and AI Copilot.
         </p>
-        <div className="mt-6 flex flex-wrap gap-4">
+        <div className="mt-6 flex flex-wrap gap-4 justify-center">
           <button
             onClick={loadDemo}
             disabled={isLoading}
-            className="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm shadow-lg shadow-brand-900/40 transition-all cursor-pointer"
+            className="neu-btn-brand px-6 py-3 rounded-xl font-bold text-sm cursor-pointer"
           >
             {isLoading ? 'Generating 90-Day Records...' : 'Load Demo Data (Instant)'}
           </button>
           <Link
             to="/import"
-            className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-all"
+            className="neu-btn px-6 py-3 rounded-xl text-slate-200 font-semibold text-sm"
           >
             Import Custom CSV
           </Link>
@@ -97,20 +96,20 @@ export const DashboardPage: React.FC = () => {
 
         <Link
           to="/copilot"
-          className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold text-sm shadow-glow-brand transition-all group"
+          className="neu-btn-brand inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl font-semibold text-sm group"
         >
           <Sparkles className="w-4 h-4 text-brand-200 group-hover:rotate-12 transition-transform" />
           <span>Ask RetailIQ Copilot</span>
         </Link>
       </div>
 
-      {/* Top 6 KPI Cards */}
+      {/* Top 6 Neumorphic KPI Cards */}
       <div className="grid grid-cols-2 lg:grid-cols-6 gap-4">
         {/* KPI 1: Today's Revenue */}
-        <div className="p-4 rounded-2xl bg-surface-900 border border-slate-800 flex flex-col justify-between">
+        <div className="p-4 rounded-2xl neu-card flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-medium text-slate-400">Today's Revenue</span>
-            <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-400">
+            <div className="w-7 h-7 rounded-xl neu-sunken-sm flex items-center justify-center text-emerald-400">
               <TrendingUp className="w-3.5 h-3.5" />
             </div>
           </div>
@@ -134,10 +133,10 @@ export const DashboardPage: React.FC = () => {
         </div>
 
         {/* KPI 2: Units Sold */}
-        <div className="p-4 rounded-2xl bg-surface-900 border border-slate-800 flex flex-col justify-between">
+        <div className="p-4 rounded-2xl neu-card flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-medium text-slate-400">Units Sold</span>
-            <div className="p-1.5 rounded-lg bg-blue-500/10 text-blue-400">
+            <div className="w-7 h-7 rounded-xl neu-sunken-sm flex items-center justify-center text-blue-400">
               <Boxes className="w-3.5 h-3.5" />
             </div>
           </div>
@@ -161,10 +160,10 @@ export const DashboardPage: React.FC = () => {
         </div>
 
         {/* KPI 3: Stock-out Risks */}
-        <div className="p-4 rounded-2xl bg-surface-900 border border-rose-500/30 bg-rose-500/5 flex flex-col justify-between">
+        <div className="p-4 rounded-2xl neu-card-critical flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-medium text-rose-300">Stock-out Risks</span>
-            <div className="p-1.5 rounded-lg bg-rose-500/20 text-rose-400">
+            <div className="w-7 h-7 rounded-xl bg-rose-500/10 shadow-[inset_1px_1px_3px_#060910] flex items-center justify-center text-rose-400 border border-rose-500/30">
               <AlertOctagon className="w-3.5 h-3.5" />
             </div>
           </div>
@@ -179,10 +178,10 @@ export const DashboardPage: React.FC = () => {
         </div>
 
         {/* KPI 4: Low Stock Items */}
-        <div className="p-4 rounded-2xl bg-surface-900 border border-amber-500/30 bg-amber-500/5 flex flex-col justify-between">
+        <div className="p-4 rounded-2xl neu-card-warning flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-medium text-amber-300">Below Reorder Point</span>
-            <div className="p-1.5 rounded-lg bg-amber-500/20 text-amber-400">
+            <div className="w-7 h-7 rounded-xl bg-amber-500/10 shadow-[inset_1px_1px_3px_#060910] flex items-center justify-center text-amber-400 border border-amber-500/30">
               <AlertTriangle className="w-3.5 h-3.5" />
             </div>
           </div>
@@ -197,10 +196,10 @@ export const DashboardPage: React.FC = () => {
         </div>
 
         {/* KPI 5: Slow Movers */}
-        <div className="p-4 rounded-2xl bg-surface-900 border border-slate-800 flex flex-col justify-between">
+        <div className="p-4 rounded-2xl neu-card flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-medium text-slate-400">Slow Movers</span>
-            <div className="p-1.5 rounded-lg bg-purple-500/10 text-purple-400">
+            <div className="w-7 h-7 rounded-xl neu-sunken-sm flex items-center justify-center text-purple-400">
               <Clock className="w-3.5 h-3.5" />
             </div>
           </div>
@@ -215,10 +214,10 @@ export const DashboardPage: React.FC = () => {
         </div>
 
         {/* KPI 6: Active Alerts */}
-        <div className="p-4 rounded-2xl bg-surface-900 border border-slate-800 flex flex-col justify-between">
+        <div className="p-4 rounded-2xl neu-card flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-xs font-medium text-slate-400">Active Alerts</span>
-            <div className="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-400">
+            <div className="w-7 h-7 rounded-xl neu-sunken-sm flex items-center justify-center text-indigo-400">
               <Bell className="w-3.5 h-3.5" />
             </div>
           </div>
@@ -247,13 +246,13 @@ export const DashboardPage: React.FC = () => {
           </div>
           <Link
             to="/recommendations"
-            className="text-xs font-semibold text-brand-400 hover:text-brand-300 flex items-center gap-1 transition-colors"
+            className="neu-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-brand-400 hover:text-brand-300 flex items-center gap-1 transition-colors"
           >
             View all recommended actions <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {attentionAlerts.map((alert) => {
             const product = summaries.find(s => s.product.id === alert.productId)?.product;
             const currentStock = alert.metrics.currentStock ?? 0;
@@ -281,19 +280,19 @@ export const DashboardPage: React.FC = () => {
             return (
               <div
                 key={alert.id}
-                className={`p-5 rounded-2xl bg-surface-900 border transition-all flex flex-col justify-between ${
+                className={`p-5 rounded-2xl transition-all flex flex-col justify-between ${
                   isCritical
-                    ? 'border-rose-500/40 hover:border-rose-500/60 shadow-lg shadow-rose-950/20'
+                    ? 'neu-card-critical'
                     : isWarning
-                    ? 'border-amber-500/30 hover:border-amber-500/50'
-                    : 'border-slate-800 hover:border-slate-700'
+                    ? 'neu-card-warning'
+                    : 'neu-card'
                 }`}
               >
                 <div>
                   {/* Card Header: Severity Badge & Store */}
                   <div className="flex items-center justify-between gap-2">
                     <span
-                      className={`px-2.5 py-0.5 text-[10px] font-bold rounded-full border uppercase tracking-wider ${
+                      className={`px-2.5 py-0.5 text-[10px] font-bold rounded-full uppercase tracking-wider shadow-[inset_1px_1px_3px_#060910] border ${
                         isCritical
                           ? 'bg-rose-500/20 text-rose-300 border-rose-500/40'
                           : isWarning
@@ -313,8 +312,8 @@ export const DashboardPage: React.FC = () => {
                     {product?.name || alert.title}
                   </h3>
 
-                  {/* Key Numerical Metrics Grid */}
-                  <div className="mt-3 grid grid-cols-3 gap-2 p-2.5 bg-surface-950/80 rounded-xl border border-slate-800/80 text-center font-mono">
+                  {/* Key Numerical Metrics Neumorphic Well */}
+                  <div className="mt-3 grid grid-cols-3 gap-2 p-2.5 neu-sunken rounded-xl text-center font-mono">
                     <div>
                       <div className="text-[10px] text-slate-500 uppercase font-sans">Stock</div>
                       <div className="text-xs font-bold text-white mt-0.5">{currentStock}</div>
@@ -338,17 +337,17 @@ export const DashboardPage: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Card Action Footer with "Why?" Button */}
+                {/* Card Action Footer with "Why?" Neumorphic Button */}
                 <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between">
                   <button
                     onClick={handleWhyClick}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-400 hover:text-brand-300 bg-brand-500/10 hover:bg-brand-500/20 px-3 py-1.5 rounded-lg border border-brand-500/30 transition-all cursor-pointer"
+                    className="neu-btn inline-flex items-center gap-1.5 text-xs font-bold text-brand-400 hover:text-brand-300 px-3 py-1.5 rounded-xl cursor-pointer"
                   >
                     <HelpCircle className="w-3.5 h-3.5" />
                     <span>Why?</span>
                   </button>
 
-                  <span className="text-[10px] text-slate-500">
+                  <span className="text-[10px] text-slate-500 font-mono">
                     Lead time: {product?.leadTimeDays || 3} days
                   </span>
                 </div>
@@ -361,17 +360,17 @@ export const DashboardPage: React.FC = () => {
       {/* Charts Section: 7-Day Revenue Trend & Category Share */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* 7-Day Revenue Velocity */}
-        <div className="lg:col-span-2 p-6 rounded-2xl bg-surface-900 border border-slate-800">
+        <div className="lg:col-span-2 p-6 rounded-2xl neu-card">
           <div className="flex items-center justify-between mb-4">
             <div>
               <h3 className="text-base font-bold text-white">Daily Revenue Trend</h3>
               <p className="text-xs text-slate-400">Trailing 7-day registered POS store revenue (₹)</p>
             </div>
-            <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300">
+            <span className="text-xs font-semibold px-3 py-1 rounded-xl neu-sunken-sm text-slate-300">
               {currentStoreName}
             </span>
           </div>
-          <div className="h-64 w-full">
+          <div className="h-64 w-full p-2 neu-sunken rounded-xl">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={last7DaysSales} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                 <defs>
@@ -389,7 +388,7 @@ export const DashboardPage: React.FC = () => {
                   tickFormatter={(val) => `₹${(val / 1000).toFixed(0)}k`}
                 />
                 <Tooltip
-                  contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '12px', fontSize: '12px' }}
+                  contentStyle={{ backgroundColor: '#0a0e17', borderColor: '#1e293b', borderRadius: '12px', fontSize: '12px', boxShadow: '5px 5px 15px #060910' }}
                   formatter={(val: any) => [`₹${Number(val).toLocaleString('en-IN')}`, 'Revenue']}
                 />
                 <Area type="monotone" dataKey="revenue" stroke="#6366f1" strokeWidth={2.5} fill="url(#revGrad)" />
@@ -399,15 +398,15 @@ export const DashboardPage: React.FC = () => {
         </div>
 
         {/* Quick Inventory Risk Radar */}
-        <div className="p-6 rounded-2xl bg-surface-900 border border-slate-800 flex flex-col justify-between">
+        <div className="p-6 rounded-2xl neu-card flex flex-col justify-between">
           <div>
             <h3 className="text-base font-bold text-white">Inventory Health Composition</h3>
             <p className="text-xs text-slate-400">Categorical SKU allocation by operational status</p>
             
             <div className="mt-6 space-y-3">
-              <div className="flex items-center justify-between p-3 rounded-xl bg-surface-950 border border-slate-800">
+              <div className="flex items-center justify-between p-3 rounded-xl neu-sunken">
                 <div className="flex items-center gap-2 text-xs text-slate-300">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#10b981]"></span>
                   <span>Optimal Safe Stock</span>
                 </div>
                 <span className="text-xs font-bold text-white font-mono">
@@ -415,9 +414,9 @@ export const DashboardPage: React.FC = () => {
                 </span>
               </div>
 
-              <div className="flex items-center justify-between p-3 rounded-xl bg-rose-500/10 border border-rose-500/30">
+              <div className="flex items-center justify-between p-3 rounded-xl bg-rose-950/20 neu-sunken border border-rose-500/20">
                 <div className="flex items-center gap-2 text-xs text-rose-300">
-                  <span className="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-rose-400 shadow-[0_0_8px_#f43f5e]"></span>
                   <span>Imminent Stockout Risk</span>
                 </div>
                 <span className="text-xs font-bold text-rose-300 font-mono">
@@ -425,9 +424,9 @@ export const DashboardPage: React.FC = () => {
                 </span>
               </div>
 
-              <div className="flex items-center justify-between p-3 rounded-xl bg-amber-500/10 border border-amber-500/30">
+              <div className="flex items-center justify-between p-3 rounded-xl bg-amber-950/20 neu-sunken border border-amber-500/20">
                 <div className="flex items-center gap-2 text-xs text-amber-300">
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b]"></span>
                   <span>Below Reorder Threshold</span>
                 </div>
                 <span className="text-xs font-bold text-amber-300 font-mono">
@@ -435,9 +434,9 @@ export const DashboardPage: React.FC = () => {
                 </span>
               </div>
 
-              <div className="flex items-center justify-between p-3 rounded-xl bg-purple-500/10 border border-purple-500/30">
+              <div className="flex items-center justify-between p-3 rounded-xl bg-purple-950/20 neu-sunken border border-purple-500/20">
                 <div className="flex items-center gap-2 text-xs text-purple-300">
-                  <span className="w-2.5 h-2.5 rounded-full bg-purple-400"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-purple-400 shadow-[0_0_8px_#c084fc]"></span>
                   <span>Slow-Moving / Overstock</span>
                 </div>
                 <span className="text-xs font-bold text-purple-300 font-mono">
@@ -447,10 +446,10 @@ export const DashboardPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-6 pt-4 border-t border-slate-800">
+          <div className="mt-6 pt-4 border-t border-slate-800/80">
             <Link
               to="/inventory"
-              className="w-full block text-center py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors"
+              className="neu-btn w-full block text-center py-2 px-3 rounded-xl text-slate-200 text-xs font-semibold"
             >
               Open Full Inventory Ledger →
             </Link>

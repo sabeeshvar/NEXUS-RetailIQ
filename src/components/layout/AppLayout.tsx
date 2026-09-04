@@ -33,7 +33,7 @@ export const AppLayout: React.FC = () => {
 
   return (
     <ExplainContext.Provider value={{ openWhy, retailData }}>
-      <div className="flex min-h-screen bg-surface-950 text-slate-100 antialiased font-sans">
+      <div className="flex min-h-screen bg-[#0c101a] text-slate-100 antialiased font-sans">
         {/* Left Sidebar */}
         <Sidebar alertCount={retailData.alerts.length} />
 

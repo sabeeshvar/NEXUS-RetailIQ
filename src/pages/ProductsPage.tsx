@@ -2,13 +2,9 @@ import React, { useState } from 'react';
 import { useExplain } from '../components/layout/AppLayout';
 import { useNavigate } from 'react-router-dom';
 import {
-  Package,
   Sparkles,
   HelpCircle,
   Search,
-  ArrowRight,
-  TrendingUp,
-  Percent,
 } from 'lucide-react';
 import { AnalyticsEngine } from '../lib/analytics/engine';
 
@@ -34,7 +30,7 @@ export const ProductsPage: React.FC = () => {
 
   const categories = Array.from(new Set(summaries.map((s) => s.product.category)));
 
-  const handleAskCopilot = (productName: string) => {
+  const handleAskCopilot = () => {
     navigate('/copilot');
   };
 
@@ -58,18 +54,18 @@ export const ProductsPage: React.FC = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search product or SKU..."
-              className="bg-surface-900 border border-slate-800 rounded-xl pl-8 pr-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-500"
+              className="neu-sunken rounded-xl pl-8 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none"
             />
           </div>
 
           <select
             value={selectedCat}
             onChange={(e) => setSelectedCat(e.target.value)}
-            className="bg-surface-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-200 focus:outline-none cursor-pointer"
+            className="neu-sunken rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none cursor-pointer"
           >
-            <option value="all">All Categories</option>
+            <option value="all" className="bg-[#0e1420]">All Categories</option>
             {categories.map((c) => (
-              <option key={c} value={c}>
+              <option key={c} value={c} className="bg-[#0e1420]">
                 {c}
               </option>
             ))}
@@ -78,7 +74,7 @@ export const ProductsPage: React.FC = () => {
       </div>
 
       {/* Product Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {filtered.map((s) => {
           const p = s.product;
 
@@ -97,13 +93,13 @@ export const ProductsPage: React.FC = () => {
           return (
             <div
               key={p.id}
-              className="p-5 rounded-2xl bg-surface-900 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between"
+              className="p-5 rounded-2xl neu-card flex flex-col justify-between"
             >
               <div>
                 {/* Header: SKU & Category */}
                 <div className="flex items-center justify-between text-[11px]">
                   <span className="font-mono text-slate-400 font-semibold">{p.sku}</span>
-                  <span className="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">
+                  <span className="px-2.5 py-0.5 rounded-full neu-sunken-sm text-slate-300 font-medium border border-slate-800">
                     {p.category}
                   </span>
                 </div>
@@ -113,7 +109,7 @@ export const ProductsPage: React.FC = () => {
                 <p className="text-[11px] text-slate-400 mt-0.5">Supplier: {p.supplier}</p>
 
                 {/* Economics Strip */}
-                <div className="mt-3 p-3 bg-surface-950 rounded-xl border border-slate-800/80 grid grid-cols-3 gap-2 text-center font-mono">
+                <div className="mt-3 p-3 neu-sunken rounded-xl grid grid-cols-3 gap-2 text-center font-mono">
                   <div>
                     <span className="text-[10px] text-slate-500 uppercase font-sans">Price</span>
                     <div className="text-xs font-bold text-white mt-0.5">₹{p.sellingPrice}</div>
@@ -156,18 +152,18 @@ export const ProductsPage: React.FC = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between gap-2">
+              <div className="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
                 <button
                   onClick={handleWhy}
-                  className="inline-flex items-center gap-1 text-xs text-slate-400 hover:text-white px-2.5 py-1.5 rounded-lg hover:bg-slate-800 transition-colors"
+                  className="neu-btn inline-flex items-center gap-1 text-xs text-slate-300 hover:text-white px-3 py-1.5 rounded-xl cursor-pointer"
                 >
-                  <HelpCircle className="w-3.5 h-3.5" />
+                  <HelpCircle className="w-3.5 h-3.5 text-brand-400" />
                   <span>Why?</span>
                 </button>
 
                 <button
-                  onClick={() => handleAskCopilot(p.name)}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-brand-500/10 hover:bg-brand-500/20 text-brand-300 text-xs font-semibold border border-brand-500/30 transition-all cursor-pointer"
+                  onClick={handleAskCopilot}
+                  className="neu-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-brand-300 text-xs font-semibold cursor-pointer"
                 >
                   <Sparkles className="w-3 h-3 text-brand-400" />
                   <span>Ask Copilot</span>

@@ -4,16 +4,17 @@
 
 @layer base {
   :root {
-    --color-bg: #090d16;
-    --color-surface: #0f172a;
-    --color-border: #1e293b;
-    --color-text: #f8fafc;
-    --color-text-muted: #94a3b8;
+    --neu-base: #0e1420;
+    --neu-surface: #111827;
+    --neu-light: #182338;
+    --neu-dark: #060910;
+    --neu-text: #f1f5f9;
+    --neu-text-muted: #94a3b8;
   }
 
   body {
-    background-color: #090d16;
-    color: #f8fafc;
+    background-color: #0c101a;
+    color: #f1f5f9;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     margin: 0;
     padding: 0;
@@ -22,37 +23,139 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Custom scrollbars */
+  /* Neumorphic Custom Scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #0f172a;
+    background: #090d16;
+    box-shadow: inset 2px 2px 4px #04060b, inset -2px -2px 4px #121a2a;
   }
   ::-webkit-scrollbar-thumb {
-    background: #334155;
+    background: #192336;
     border-radius: 9999px;
+    box-shadow: 2px 2px 5px #060910, -2px -2px 5px #202e48;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #475569;
+    background: #23314c;
   }
 }
 
-/* Glassmorphic card styling */
-.glass-panel {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+/* ==========================================================================
+   NEUMORPHIC / NEOMORPHOLOGICAL SOFT-UI DESIGN SYSTEM
+   ========================================================================== */
+
+/* 1. Extruded Neumorphic Cards & Panels */
+.neu-card {
+  background: linear-gradient(145deg, #121927, #0d121c);
+  box-shadow: 7px 7px 16px #060910, -7px -7px 16px #162032;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 1rem;
 }
 
-.glass-panel-hover {
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+.neu-card-sm {
+  background: linear-gradient(145deg, #121927, #0d121c);
+  box-shadow: 4px 4px 10px #060910, -4px -4px 10px #162032;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 0.75rem;
 }
-.glass-panel-hover:hover {
-  border-color: rgba(99, 102, 241, 0.3);
+
+.neu-card-lg {
+  background: linear-gradient(145deg, #131a29, #0c111a);
+  box-shadow: 12px 12px 26px #05080e, -12px -12px 26px #172336;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1.25rem;
+}
+
+.neu-convex {
+  background: linear-gradient(145deg, #151d2e, #0b101b);
+  box-shadow: 6px 6px 14px #060910, -6px -6px 14px #182338;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 2. Sunken / Pressed Wells (Inputs, Chart frames, Well containers, Active tabs) */
+.neu-sunken,
+.neu-inset,
+.neu-pressed {
+  background: #0a0e17;
+  box-shadow: inset 4px 4px 9px #05080e, inset -4px -4px 9px #151f30;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.neu-sunken-sm {
+  background: #0a0e17;
+  box-shadow: inset 2px 2px 6px #05080e, inset -2px -2px 6px #151f30;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* 3. Neumorphic Buttons & Clickable Elements */
+.neu-btn {
+  background: linear-gradient(145deg, #131a29, #0d121c);
+  box-shadow: 5px 5px 12px #060910, -5px -5px 12px #172336;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-btn:hover {
+  box-shadow: 7px 7px 15px #05080e, -7px -7px 15px #1a283e;
   transform: translateY(-1px);
-  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.5);
+}
+
+.neu-btn:active,
+.neu-btn-active {
+  background: #0a0e17;
+  box-shadow: inset 3px 3px 7px #05080e, inset -3px -3px 7px #141d2c;
+  transform: translateY(1px);
+}
+
+.neu-btn-brand {
+  background: linear-gradient(145deg, #4f46e5, #4338ca);
+  box-shadow: 5px 5px 14px #060910, -5px -5px 14px #1a2442, 0 0 15px -3px rgba(99, 102, 241, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-btn-brand:hover {
+  box-shadow: 7px 7px 18px #060910, -7px -7px 18px #202d55, 0 0 20px 0 rgba(99, 102, 241, 0.5);
+  transform: translateY(-1px);
+}
+
+.neu-btn-brand:active {
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(255, 255, 255, 0.1);
+  transform: translateY(1px);
+}
+
+/* 4. Neumorphic Pill / Badge */
+.neu-pill {
+  background: linear-gradient(145deg, #121927, #0d121c);
+  box-shadow: 3px 3px 8px #060910, -3px -3px 8px #162032;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.neu-pill-active {
+  background: #0a0e17;
+  box-shadow: inset 2px 2px 5px #05080e, inset -2px -2px 5px #172234;
+}
+
+/* 5. Neumorphic Severity Glow Cards */
+.neu-card-critical {
+  background: linear-gradient(145deg, #15111a, #100b12);
+  box-shadow: 7px 7px 16px #060910, -7px -7px 16px #1c1524, 0 0 20px -5px rgba(244, 63, 94, 0.25);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+}
+
+.neu-card-warning {
+  background: linear-gradient(145deg, #161411, #110e0a);
+  box-shadow: 7px 7px 16px #060910, -7px -7px 16px #1e1a14, 0 0 20px -5px rgba(245, 158, 11, 0.25);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.neu-card-success {
+  background: linear-gradient(145deg, #0e1714, #08100d);
+  box-shadow: 7px 7px 16px #060910, -7px -7px 16px #12201b, 0 0 20px -5px rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
 /* Shimmer animation for AI Copilot thinking state */
@@ -62,7 +165,7 @@
 }
 
 .shimmer {
-  background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%);
+  background: linear-gradient(90deg, rgba(255,255,255,0.02) 25%, rgba(255,255,255,0.07) 50%, rgba(255,255,255,0.02) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }

@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
 import { useExplain } from '../components/layout/AppLayout';
 import {
-  Sparkles,
-  RotateCcw,
-  Layers,
-  TrendingUp,
-  TrendingDown,
-  Truck,
-  PauseCircle,
   HelpCircle,
-  ArrowRight,
-  ShieldCheck,
 } from 'lucide-react';
 import { AnalyticsEngine } from '../lib/analytics/engine';
 
@@ -52,8 +43,8 @@ export const RecommendationsPage: React.FC = () => {
       product: s.product,
       currentStock: s.currentStock,
       title: `Mitigate Excess Holding: ${s.product.name}`,
-      problem: `Holding ${s.currentStock} units representing ${s.stockCoverageDays} days of forward coverage. ₹${s.inventoryValue.toLocaleString('en-IN')} locked in working capital.`,
-      evidence: `30-day volume is only ${s.salesLast30Days} units. Benchmark threshold is 45 days.`,
+      problem: `Holding ${s.currentStock} units representing forward coverage. ₹${s.inventoryValue.toLocaleString('en-IN')} locked in working capital.`,
+      evidence: `Velocity is low relative to category average. Benchmark runway threshold exceeded.`,
       action: s.isSlowMoving
         ? 'Create promotional product bundle with fast-moving category companion or apply a 10% volume discount.'
         : 'Freeze recurring purchase orders and reallocate surplus to high-demand branch locations.',
@@ -115,44 +106,44 @@ export const RecommendationsPage: React.FC = () => {
           </p>
         </div>
 
-        {/* Filter Pills */}
-        <div className="flex bg-surface-900 border border-slate-800 rounded-xl p-1 gap-1">
+        {/* Neumorphic Filter Pills */}
+        <div className="flex flex-wrap neu-sunken rounded-2xl p-1.5 gap-1.5">
           <button
             onClick={() => setCategoryFilter('ALL')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-              categoryFilter === 'ALL' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-white'
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+              categoryFilter === 'ALL' ? 'neu-btn-brand text-white' : 'neu-btn text-slate-400 hover:text-white'
             }`}
           >
             All ({allRecommendations.length})
           </button>
           <button
             onClick={() => setCategoryFilter('REORDER')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-              categoryFilter === 'REORDER' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-white'
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+              categoryFilter === 'REORDER' ? 'neu-btn-brand text-white' : 'neu-btn text-slate-400 hover:text-white'
             }`}
           >
             Reorder ({reorders.length})
           </button>
           <button
             onClick={() => setCategoryFilter('OVERSTOCK')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-              categoryFilter === 'OVERSTOCK' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-white'
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+              categoryFilter === 'OVERSTOCK' ? 'neu-btn-brand text-white' : 'neu-btn text-slate-400 hover:text-white'
             }`}
           >
             Reduce Stock ({overstocks.length})
           </button>
           <button
             onClick={() => setCategoryFilter('SPIKE')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-              categoryFilter === 'SPIKE' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-white'
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+              categoryFilter === 'SPIKE' ? 'neu-btn-brand text-white' : 'neu-btn text-slate-400 hover:text-white'
             }`}
           >
             Spikes ({spikes.length})
           </button>
           <button
             onClick={() => setCategoryFilter('DROP')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-              categoryFilter === 'DROP' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-white'
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+              categoryFilter === 'DROP' ? 'neu-btn-brand text-white' : 'neu-btn text-slate-400 hover:text-white'
             }`}
           >
             Drops ({drops.length})
@@ -160,7 +151,7 @@ export const RecommendationsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Recommendations Feed */}
+      {/* Recommendations Feed in Neumorphic Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {filtered.map((rec) => {
           const handleWhy = () => {
@@ -178,11 +169,11 @@ export const RecommendationsPage: React.FC = () => {
           return (
             <div
               key={rec.id}
-              className="p-6 rounded-2xl bg-surface-900 border border-slate-800 hover:border-brand-500/40 transition-all flex flex-col justify-between"
+              className="p-6 rounded-2xl neu-card flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/10 text-brand-300 border border-brand-500/30">
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/10 text-brand-300 border border-brand-500/30 shadow-[inset_1px_1px_2px_#060910]">
                     {rec.tag}
                   </span>
                   <span className="text-xs text-slate-400">{currentStoreName}</span>
@@ -192,17 +183,17 @@ export const RecommendationsPage: React.FC = () => {
 
                 {/* Problem & Evidence */}
                 <div className="mt-3 space-y-2 text-xs">
-                  <div className="p-2.5 bg-surface-950 rounded-xl border border-slate-800/80">
+                  <div className="p-3 neu-sunken rounded-xl">
                     <span className="text-slate-400 font-semibold block mb-0.5">Identified Problem:</span>
                     <span className="text-slate-200">{rec.problem}</span>
                   </div>
 
-                  <div className="p-2.5 bg-surface-950 rounded-xl border border-slate-800/80">
+                  <div className="p-3 neu-sunken rounded-xl">
                     <span className="text-slate-400 font-semibold block mb-0.5">Empirical Evidence:</span>
                     <span className="text-slate-200">{rec.evidence}</span>
                   </div>
 
-                  <div className="p-3 bg-brand-950/40 rounded-xl border border-brand-800/50">
+                  <div className="p-3.5 neu-card-sm border border-brand-500/30">
                     <span className="text-brand-300 font-bold block mb-0.5">Prescribed Action:</span>
                     <span className="text-white font-medium">{rec.action}</span>
                   </div>
@@ -220,17 +211,17 @@ export const RecommendationsPage: React.FC = () => {
               </div>
 
               {/* Action Button & "Why?" */}
-              <div className="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between">
+              <div className="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between">
                 <button
                   onClick={handleWhy}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-brand-500/10 hover:bg-brand-500/20 text-brand-300 text-xs font-bold border border-brand-500/30 transition-all cursor-pointer"
+                  className="neu-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-brand-300 text-xs font-bold cursor-pointer"
                 >
                   <HelpCircle className="w-3.5 h-3.5" />
                   <span>Why this action?</span>
                 </button>
 
                 <span className="text-[11px] text-emerald-400 font-medium">
-                  Expected: {rec.expectedPurpose}
+                  Goal: {rec.expectedPurpose}
                 </span>
               </div>
             </div>

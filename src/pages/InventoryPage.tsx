@@ -1,15 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { useExplain } from '../components/layout/AppLayout';
 import {
-  Boxes,
   AlertOctagon,
   AlertTriangle,
   Clock,
-  CheckCircle,
   HelpCircle,
   Search,
-  ArrowRight,
-  TrendingDown,
   Layers,
 } from 'lucide-react';
 import { AnalyticsEngine } from '../lib/analytics/engine';
@@ -74,11 +70,11 @@ export const InventoryPage: React.FC = () => {
 
         {/* Global Stock Stats */}
         <div className="flex items-center gap-3">
-          <div className="px-4 py-2 bg-surface-900 border border-slate-800 rounded-xl text-right font-mono">
+          <div className="px-4 py-2 neu-card rounded-xl text-right font-mono">
             <span className="text-[10px] text-slate-500 uppercase font-sans">Total Stock Value</span>
             <div className="text-base font-bold text-white">₹{totalValuation.toLocaleString('en-IN')}</div>
           </div>
-          <div className="px-4 py-2 bg-surface-900 border border-slate-800 rounded-xl text-right font-mono">
+          <div className="px-4 py-2 neu-card rounded-xl text-right font-mono">
             <span className="text-[10px] text-slate-500 uppercase font-sans">Tracked SKUs</span>
             <div className="text-base font-bold text-brand-400">{summaries.length} Items</div>
           </div>
@@ -87,24 +83,24 @@ export const InventoryPage: React.FC = () => {
 
       {/* Segment Tabs & Search Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap bg-surface-900 border border-slate-800 rounded-xl p-1 gap-1">
+        {/* Neumorphic Filter Tabs */}
+        <div className="flex flex-wrap neu-sunken rounded-2xl p-1.5 gap-1.5">
           <button
             onClick={() => setActiveTab('ALL')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
               activeTab === 'ALL'
-                ? 'bg-brand-600 text-white shadow-sm'
-                : 'text-slate-400 hover:text-white'
+                ? 'neu-btn-brand text-white'
+                : 'neu-btn text-slate-400 hover:text-white'
             }`}
           >
             All SKUs ({summaries.length})
           </button>
           <button
             onClick={() => setActiveTab('STOCKOUT')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'STOCKOUT'
-                ? 'bg-rose-600 text-white shadow-sm'
-                : 'text-rose-400 hover:text-rose-300'
+                ? 'bg-rose-600 text-white shadow-[0_0_15px_rgba(244,63,94,0.4)]'
+                : 'neu-btn text-rose-400 hover:text-rose-300'
             }`}
           >
             <AlertOctagon className="w-3.5 h-3.5" />
@@ -112,10 +108,10 @@ export const InventoryPage: React.FC = () => {
           </button>
           <button
             onClick={() => setActiveTab('LOW')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'LOW'
-                ? 'bg-amber-600 text-white shadow-sm'
-                : 'text-amber-400 hover:text-amber-300'
+                ? 'bg-amber-600 text-white shadow-[0_0_15px_rgba(245,158,11,0.4)]'
+                : 'neu-btn text-amber-400 hover:text-amber-300'
             }`}
           >
             <AlertTriangle className="w-3.5 h-3.5" />
@@ -123,10 +119,10 @@ export const InventoryPage: React.FC = () => {
           </button>
           <button
             onClick={() => setActiveTab('OVERSTOCK')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'OVERSTOCK'
-                ? 'bg-blue-600 text-white shadow-sm'
-                : 'text-blue-400 hover:text-blue-300'
+                ? 'bg-blue-600 text-white shadow-[0_0_15px_rgba(59,130,246,0.4)]'
+                : 'neu-btn text-blue-400 hover:text-blue-300'
             }`}
           >
             <Layers className="w-3.5 h-3.5" />
@@ -134,10 +130,10 @@ export const InventoryPage: React.FC = () => {
           </button>
           <button
             onClick={() => setActiveTab('SLOW')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'SLOW'
-                ? 'bg-purple-600 text-white shadow-sm'
-                : 'text-purple-400 hover:text-purple-300'
+                ? 'bg-purple-600 text-white shadow-[0_0_15px_rgba(168,85,247,0.4)]'
+                : 'neu-btn text-purple-400 hover:text-purple-300'
             }`}
           >
             <Clock className="w-3.5 h-3.5" />
@@ -153,16 +149,16 @@ export const InventoryPage: React.FC = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search SKU or name..."
-            className="w-full bg-surface-900 border border-slate-800 rounded-xl pl-8 pr-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-500"
+            className="w-full neu-sunken rounded-xl pl-8 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none"
           />
         </div>
       </div>
 
-      {/* Inventory Table */}
-      <div className="rounded-2xl bg-surface-900 border border-slate-800 overflow-hidden">
+      {/* Inventory Table in Neumorphic Card */}
+      <div className="rounded-2xl neu-card overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-surface-950/80 border-b border-slate-800 text-slate-400 font-semibold uppercase tracking-wider">
+            <thead className="bg-[#0a0e17] border-b border-slate-800/80 text-slate-400 font-semibold uppercase tracking-wider">
               <tr>
                 <th className="py-3 px-4">Product & Category</th>
                 <th className="py-3 px-3">SKU</th>
@@ -175,7 +171,7 @@ export const InventoryPage: React.FC = () => {
                 <th className="py-3 px-3 text-center">Explain</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800/60 font-sans">
+            <tbody className="divide-y divide-slate-800/50 font-sans">
               {filteredSummaries.length === 0 ? (
                 <tr>
                   <td colSpan={9} className="text-center py-8 text-slate-500">
@@ -203,7 +199,7 @@ export const InventoryPage: React.FC = () => {
                   };
 
                   return (
-                    <tr key={p.id} className="hover:bg-slate-800/30 transition-colors">
+                    <tr key={p.id} className="hover:bg-[#111827]/40 transition-colors">
                       {/* Product Name & Category */}
                       <td className="py-3 px-4">
                         <div className="font-bold text-white">{p.name}</div>
@@ -220,57 +216,58 @@ export const InventoryPage: React.FC = () => {
                       </td>
 
                       {/* 7d Velocity */}
-                      <td className="py-3 px-3 text-right font-mono text-slate-300">
-                        {s.avgDailySales7d}/d
+                      <td className="py-3 px-3 text-right font-mono text-slate-200">
+                        {s.avgDailySales7d}
+                        <span className="text-[10px] text-slate-500 font-sans ml-1">/day</span>
                       </td>
 
-                      {/* Days Remaining */}
-                      <td className="py-3 px-3 text-right font-mono font-bold">
+                      {/* Days Remaining Runway */}
+                      <td className="py-3 px-3 text-right font-mono">
                         <span
-                          className={
+                          className={`font-bold ${
                             s.daysRemaining <= 2.5
-                              ? 'text-rose-400'
-                              : s.daysRemaining <= 5
+                              ? 'text-rose-400 font-extrabold'
+                              : s.daysRemaining <= 6
                               ? 'text-amber-300'
-                              : 'text-slate-300'
-                          }
+                              : 'text-emerald-400'
+                          }`}
                         >
                           {s.daysRemaining > 300 ? '300+d' : `${s.daysRemaining}d`}
                         </span>
                       </td>
 
                       {/* Reorder Point */}
-                      <td className="py-3 px-3 text-right font-mono text-slate-300">
+                      <td className="py-3 px-3 text-right font-mono text-slate-400">
                         {s.reorderPoint}
                       </td>
 
-                      {/* Status Badge */}
+                      {/* Operational Status Tag */}
                       <td className="py-3 px-3 text-center">
                         {isStockout ? (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40">
-                            STOCK-OUT RISK
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30 shadow-[inset_1px_1px_2px_#060910]">
+                            Stockout Risk
                           </span>
                         ) : isLow ? (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
-                            LOW STOCK
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 shadow-[inset_1px_1px_2px_#060910]">
+                            Low Stock
                           </span>
                         ) : isOver ? (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/20 text-blue-300 border border-blue-500/40">
-                            OVERSTOCKED
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 shadow-[inset_1px_1px_2px_#060910]">
+                            Overstocked
                           </span>
                         ) : isSlow ? (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-300 border border-purple-500/40">
-                            SLOW-MOVING
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30 shadow-[inset_1px_1px_2px_#060910]">
+                            Slow Mover
                           </span>
                         ) : (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
-                            HEALTHY
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-[inset_1px_1px_2px_#060910]">
+                            Healthy
                           </span>
                         )}
                       </td>
 
                       {/* Action */}
-                      <td className="py-3 px-4 text-slate-300 text-[11px]">
+                      <td className="py-3 px-4 text-slate-300 text-[11px] leading-snug">
                         {s.recommendedReorderQty > 0 ? (
                           <span className="font-semibold text-brand-300">
                             Reorder {s.recommendedReorderQty} units
@@ -288,10 +285,10 @@ export const InventoryPage: React.FC = () => {
                       <td className="py-3 px-3 text-center">
                         <button
                           onClick={handleWhy}
-                          className="p-1.5 rounded-lg bg-brand-500/10 hover:bg-brand-500/20 text-brand-400 border border-brand-500/30 transition-all cursor-pointer"
-                          title="View mathematical calculation and assumptions"
+                          className="neu-btn inline-flex items-center gap-1 text-[11px] font-bold text-brand-400 hover:text-brand-300 px-2.5 py-1 rounded-xl cursor-pointer"
                         >
-                          <HelpCircle className="w-3.5 h-3.5" />
+                          <HelpCircle className="w-3 h-3" />
+                          <span>Why?</span>
                         </button>
                       </td>
                     </tr>
