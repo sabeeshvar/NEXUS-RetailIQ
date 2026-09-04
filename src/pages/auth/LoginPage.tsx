@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 
 export const LoginPage: React.FC = () => {
-  const { login, getFriendlyErrorMessage, currentUser } = useAuth();
+  const { login, loginDemo, getFriendlyErrorMessage, currentUser } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -56,10 +56,20 @@ export const LoginPage: React.FC = () => {
     }
   };
 
-  const handleFillDemo = () => {
+  const handleFillDemo = async () => {
     setEmail('manager@nexusretailiq.com');
     setPassword('RetailIQ@2026');
     setErrorMessage(null);
+    setIsLoading(true);
+    try {
+      await loginDemo();
+      const from = (location.state as any)?.from?.pathname || '/';
+      navigate(from, { replace: true });
+    } catch (err: any) {
+      setErrorMessage(err.message || 'Failed to login with demo credentials.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { DataRepository } from '../services/dataRepository';
 import { AnalyticsEngine, ProductMetricSummary } from '../lib/analytics/engine';
-import { Store, Product, Sale, InventoryRecord, Alert, DashboardKPIs } from '../types';
+import { Store, Product, Sale, InventoryRecord, Alert, DashboardKPIs, DataSourceType, DataSourceMetadata } from '../types';
 
 export function useRetailData() {
   const [stores, setStores] = useState<Store[]>([]);
@@ -11,17 +11,23 @@ export function useRetailData() {
   const [selectedStoreId, setSelectedStoreId] = useState<string>('all');
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [hasData, setHasData] = useState<boolean>(false);
+  const [activeDataSource, setActiveDataSource] = useState<DataSourceType>('DEMO');
+  const [dataSourceMetadata, setDataSourceMetadata] = useState<DataSourceMetadata | null>(null);
 
   const refreshData = useCallback(() => {
     const s = DataRepository.getStores();
     const p = DataRepository.getProducts();
     const sl = DataRepository.getSales();
     const inv = DataRepository.getInventory();
+    const source = DataRepository.getActiveDataSource();
+    const meta = DataRepository.getDataSourceMetadata();
 
     setStores(s);
     setProducts(p);
     setSales(sl);
     setInventory(inv);
+    setActiveDataSource(source);
+    setDataSourceMetadata(meta);
     setHasData(p.length > 0);
     setIsLoading(false);
   }, []);
@@ -42,6 +48,12 @@ export function useRetailData() {
 
   const clearAll = useCallback(() => {
     DataRepository.clearData();
+    refreshData();
+  }, [refreshData]);
+
+  const clearImportedData = useCallback(async () => {
+    setIsLoading(true);
+    await DataRepository.clearImportedData();
     refreshData();
   }, [refreshData]);
 
@@ -114,6 +126,9 @@ export function useRetailData() {
     isLoading,
     loadDemo,
     clearAll,
+    clearImportedData,
     refreshData,
+    activeDataSource,
+    dataSourceMetadata,
   };
 }

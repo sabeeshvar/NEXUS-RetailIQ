@@ -173,6 +173,8 @@ export interface CopilotMessage {
   dataAvailable: boolean;
   explanation?: WhyExplanation;
   rawJson?: unknown;
+  dataSource?: string;
+  provenance?: string;
 }
 
 export interface DashboardKPIs {
@@ -188,3 +190,21 @@ export interface DashboardKPIs {
   activeAlertsCount: number;
   totalInventoryValue: number;
 }
+
+export type DataSourceType = 'DEMO' | 'FIRESTORE' | 'UPLOADED_CSV' | 'UPLOADED_SQLITE';
+
+export interface DataSourceMetadata {
+  sourceType: DataSourceType;
+  fileName: string;
+  fileType: 'csv' | 'sqlite';
+  recordCount: number;
+  productCount: number;
+  storeCount: number;
+  dateRange: { min: string; max: string };
+  importedAt: string;
+  hasInventoryData: boolean;
+  hasSalesData: boolean;
+  hasProductData: boolean;
+  hasStoreData: boolean;
+}
+

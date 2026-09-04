@@ -1,4 +1,4 @@
-import { Store, Product, Sale, InventoryRecord, Alert } from '../types';
+import { Store, Product, Sale, InventoryRecord, DataSourceType, DataSourceMetadata } from '../types';
 import { generateRetailDemoData } from '../data/demoData';
 import { db, isConfigured } from './firebase';
 import {
@@ -15,6 +15,8 @@ const STORAGE_KEYS = {
   INVENTORY: 'nexus_retailiq_inventory',
   ALERTS: 'nexus_retailiq_alerts',
   DEMO_LOADED: 'nexus_retailiq_demo_loaded',
+  ACTIVE_SOURCE: 'nexus_retailiq_active_source',
+  DATA_SOURCE_META: 'nexus_retailiq_data_source_meta',
 };
 
 // Event emitter for reactive updates in React hooks
@@ -29,6 +31,17 @@ export class DataRepository {
   public static subscribe(listener: Listener): () => void {
     listeners.add(listener);
     return () => listeners.delete(listener);
+  }
+
+  public static getActiveDataSource(): DataSourceType {
+    const raw = localStorage.getItem(STORAGE_KEYS.ACTIVE_SOURCE);
+    if (raw) return raw as DataSourceType;
+    return isConfigured ? 'FIRESTORE' : 'DEMO';
+  }
+
+  public static getDataSourceMetadata(): DataSourceMetadata | null {
+    const raw = localStorage.getItem(STORAGE_KEYS.DATA_SOURCE_META);
+    return raw ? JSON.parse(raw) : null;
   }
 
   public static hasData(): boolean {
@@ -65,10 +78,57 @@ export class DataRepository {
   }
 
   /**
+   * Set uploaded normalized dataset from CSV or SQLite file
+   */
+  public static setUploadedDataset(
+    dataset: {
+      products: Product[];
+      stores: Store[];
+      sales: Sale[];
+      inventory: InventoryRecord[];
+    },
+    metadata: DataSourceMetadata
+  ): void {
+    // Completely replace working datasets with the uploaded dataset (zero mixing with demo data)
+    localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(dataset.products));
+    localStorage.setItem(STORAGE_KEYS.STORES, JSON.stringify(dataset.stores));
+    localStorage.setItem(STORAGE_KEYS.SALES, JSON.stringify(dataset.sales));
+    localStorage.setItem(STORAGE_KEYS.INVENTORY, JSON.stringify(dataset.inventory));
+    localStorage.setItem(STORAGE_KEYS.ACTIVE_SOURCE, metadata.sourceType);
+    localStorage.setItem(STORAGE_KEYS.DATA_SOURCE_META, JSON.stringify(metadata));
+    localStorage.removeItem(STORAGE_KEYS.DEMO_LOADED);
+
+    notifyChange();
+    console.info(`[DataRepository] Uploaded dataset activated: ${metadata.sourceType} (${metadata.fileName})`);
+  }
+
+  /**
+   * Clear user-uploaded dataset and return to default demo/cloud data
+   */
+  public static async clearImportedData(): Promise<void> {
+    localStorage.removeItem(STORAGE_KEYS.ACTIVE_SOURCE);
+    localStorage.removeItem(STORAGE_KEYS.DATA_SOURCE_META);
+    
+    // Attempt to reload Firestore data or fallback to clean demo scenario
+    const synced = await this.fetchFromFirestore();
+    if (!synced) {
+      await this.loadDemoData();
+    }
+    notifyChange();
+    console.info('[DataRepository] Reverted to default data source.');
+  }
+
+  /**
    * Fetch live collections from Cloud Firestore and synchronize cache
    */
   public static async fetchFromFirestore(): Promise<boolean> {
     if (!isConfigured || !db) return false;
+    // If user has an active uploaded file, do not overwrite unless explicitly requested
+    const currentSource = this.getActiveDataSource();
+    if (currentSource === 'UPLOADED_CSV' || currentSource === 'UPLOADED_SQLITE') {
+      return true;
+    }
+
     try {
       console.log('[NEXUS RetailIQ] Querying live Cloud Firestore collections...');
       const storesSnap = await getDocs(collection(db, 'stores'));
@@ -88,6 +148,7 @@ export class DataRepository {
         if (sales.length > 0) {
           localStorage.setItem(STORAGE_KEYS.SALES, JSON.stringify(sales));
         }
+        localStorage.setItem(STORAGE_KEYS.ACTIVE_SOURCE, 'FIRESTORE');
         notifyChange();
         console.log('[NEXUS RetailIQ] Live Cloud Firestore sync complete.');
         return true;
@@ -110,6 +171,8 @@ export class DataRepository {
     localStorage.setItem(STORAGE_KEYS.SALES, JSON.stringify(demo.sales));
     localStorage.setItem(STORAGE_KEYS.INVENTORY, JSON.stringify(demo.inventory));
     localStorage.setItem(STORAGE_KEYS.DEMO_LOADED, 'true');
+    localStorage.setItem(STORAGE_KEYS.ACTIVE_SOURCE, 'DEMO');
+    localStorage.removeItem(STORAGE_KEYS.DATA_SOURCE_META);
 
     // 2. If Cloud Firestore is configured, write batch data
     if (isConfigured && db) {
@@ -117,22 +180,18 @@ export class DataRepository {
         console.log('[NEXUS RetailIQ] Syncing demo dataset to Cloud Firestore...');
         const batch = writeBatch(db);
 
-        // Upload stores
         demo.stores.forEach(s => {
           batch.set(doc(db!, 'stores', s.id), s);
         });
 
-        // Upload products (first 30)
         demo.products.forEach(p => {
           batch.set(doc(db!, 'products', p.id), p);
         });
 
-        // Upload current inventory
         demo.inventory.forEach(inv => {
           batch.set(doc(db!, 'inventory', inv.id), inv);
         });
 
-        // Upload recent 7 days of sales to Firestore to prevent quota limits
         const recentSales = demo.sales.slice(-200);
         recentSales.forEach(sale => {
           batch.set(doc(db!, 'sales', sale.id), sale);
@@ -158,40 +217,8 @@ export class DataRepository {
     localStorage.removeItem(STORAGE_KEYS.INVENTORY);
     localStorage.removeItem(STORAGE_KEYS.ALERTS);
     localStorage.removeItem(STORAGE_KEYS.DEMO_LOADED);
-    notifyChange();
-  }
-
-  /**
-   * Import custom products, sales, stores, or inventory
-   */
-  public static importProducts(products: Product[]): void {
-    const existing = this.getProducts();
-    const existingMap = new Map(existing.map(p => [p.id, p]));
-    products.forEach(p => existingMap.set(p.id, p));
-    localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(Array.from(existingMap.values())));
-    notifyChange();
-  }
-
-  public static importSales(sales: Sale[]): void {
-    const existing = this.getSales();
-    const merged = [...existing, ...sales];
-    localStorage.setItem(STORAGE_KEYS.SALES, JSON.stringify(merged));
-    notifyChange();
-  }
-
-  public static importInventory(inventory: InventoryRecord[]): void {
-    const existing = this.getInventory();
-    const existingMap = new Map(existing.map(i => [`${i.storeId}-${i.productId}`, i]));
-    inventory.forEach(i => existingMap.set(`${i.storeId}-${i.productId}`, i));
-    localStorage.setItem(STORAGE_KEYS.INVENTORY, JSON.stringify(Array.from(existingMap.values())));
-    notifyChange();
-  }
-
-  public static importStores(stores: Store[]): void {
-    const existing = this.getStores();
-    const existingMap = new Map(existing.map(s => [s.id, s]));
-    stores.forEach(s => existingMap.set(s.id, s));
-    localStorage.setItem(STORAGE_KEYS.STORES, JSON.stringify(Array.from(existingMap.values())));
+    localStorage.removeItem(STORAGE_KEYS.ACTIVE_SOURCE);
+    localStorage.removeItem(STORAGE_KEYS.DATA_SOURCE_META);
     notifyChange();
   }
 }

@@ -28,7 +28,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ alertCount }) => {
     { to: '/stores', label: 'Stores', icon: Store },
     { to: '/alerts', label: 'Alerts', icon: Bell, badge: alertCount },
     { to: '/recommendations', label: 'Recommendations', icon: Sparkles },
-    { to: '/import', label: 'Data Import', icon: FileSpreadsheet },
+    { to: '/import-data', label: 'Import Data', icon: FileSpreadsheet },
     { to: '/settings', label: 'Settings', icon: Settings },
   ];
 

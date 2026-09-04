@@ -46,6 +46,9 @@ export const AppLayout: React.FC = () => {
             hasData={retailData.hasData}
             onLoadDemo={retailData.loadDemo}
             isLoading={retailData.isLoading}
+            activeDataSource={retailData.activeDataSource}
+            dataSourceMetadata={retailData.dataSourceMetadata}
+            onClearImportedData={retailData.clearImportedData}
           />
 
           {/* Page Content */}

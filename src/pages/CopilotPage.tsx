@@ -160,6 +160,14 @@ export const CopilotPage: React.FC = () => {
                     : 'neu-card text-slate-200 rounded-tl-none'
                 }`}
               >
+                {/* Compact Data Provenance Indicator */}
+                {!isUser && msg.provenance && (
+                  <div className="mb-2.5 pb-2 border-b border-slate-800/80 flex items-center gap-1.5 text-[10px] text-emerald-400 font-mono">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                    <span className="truncate font-semibold">{msg.provenance}</span>
+                  </div>
+                )}
+
                 {/* Text Content */}
                 <div className="whitespace-pre-wrap prose prose-invert max-w-none text-xs sm:text-sm font-sans">
                   {msg.content}

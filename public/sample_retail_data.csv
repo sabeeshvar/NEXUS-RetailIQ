@@ -1,0 +1,841 @@
+product_name,sku,category,store_name,sale_date,quantity,revenue,current_stock,selling_price,cost_price,lead_time_days,safety_stock
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-01",9,225,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-01",9,486,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-01",6,960,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-01",6,1260,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-01",6,1590,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-01",6,870,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-01",8,960,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-01",8,760,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-01",8,360,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-01",6,840,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-01",3,174,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-01",1,115,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-01",9,225,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-01",9,486,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-01",6,960,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-01",6,1260,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-01",6,1590,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-01",6,870,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-01",8,960,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-01",8,760,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-01",8,360,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-01",6,840,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-01",3,174,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-01",1,115,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-02",9,225,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-02",9,486,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-02",6,960,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-02",6,1260,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-02",6,1590,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-02",6,870,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-02",8,960,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-02",8,760,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-02",8,360,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-02",6,840,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-02",3,174,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-02",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-02",7,175,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-02",7,378,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-02",4,640,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-02",4,840,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-02",4,1060,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-02",4,580,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-02",6,720,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-02",6,570,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-02",6,270,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-02",4,560,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-02",1,58,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-02",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-03",7,175,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-03",7,378,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-03",4,640,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-03",4,840,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-03",4,1060,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-03",4,580,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-03",6,720,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-03",6,570,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-03",6,270,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-03",4,560,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-03",1,58,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-03",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-03",5,125,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-03",5,270,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-03",2,320,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-03",2,420,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-03",2,530,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-03",2,290,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-03",4,480,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-03",4,380,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-03",4,180,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-03",2,280,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-03",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-03",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-04",5,125,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-04",5,270,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-04",2,320,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-04",2,420,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-04",2,530,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-04",2,290,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-04",4,480,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-04",4,380,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-04",4,180,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-04",2,280,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-04",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-04",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-04",5,125,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-04",5,270,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-04",2,320,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-04",2,420,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-04",2,530,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-04",2,290,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-04",4,480,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-04",4,380,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-04",4,180,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-04",2,280,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-04",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-04",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-05",5,125,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-05",5,270,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-05",2,320,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-05",2,420,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-05",2,530,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-05",2,290,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-05",4,480,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-05",4,380,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-05",4,180,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-05",2,280,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-05",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-05",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-05",6,150,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-05",6,324,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-05",3,480,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-05",3,630,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-05",3,795,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-05",3,435,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-05",5,600,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-05",5,475,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-05",5,225,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-05",3,420,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-05",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-05",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-06",6,150,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-06",6,324,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-06",3,480,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-06",3,630,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-06",3,795,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-06",3,435,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-06",5,600,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-06",5,475,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-06",5,225,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-06",3,420,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-06",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-06",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-06",8,200,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-06",8,432,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-06",5,800,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-06",5,1050,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-06",5,1325,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-06",5,725,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-06",7,840,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-06",7,665,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-06",7,315,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-06",5,700,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-06",2,116,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-06",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-07",8,200,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-07",8,432,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-07",5,800,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-07",5,1050,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-07",5,1325,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-07",5,725,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-07",7,840,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-07",7,665,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-07",7,315,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-07",5,700,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-07",2,116,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-07",1,115,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-07",9,225,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-07",9,486,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-07",6,960,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-07",6,1260,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-07",6,1590,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-07",6,870,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-07",8,960,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-07",8,760,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-07",8,360,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-07",6,840,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-07",3,174,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-07",1,115,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-08",9,225,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-08",9,486,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-08",6,960,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-08",6,1260,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-08",6,1590,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-08",6,870,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-08",8,960,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-08",8,760,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-08",8,360,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-08",6,840,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-08",3,174,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-08",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-08",8,200,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-08",8,432,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-08",5,800,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-08",5,1050,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-08",5,1325,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-08",5,725,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-08",7,840,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-08",7,665,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-08",7,315,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-08",5,700,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-08",2,116,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-08",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-09",8,200,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-09",8,432,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-09",5,800,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-09",5,1050,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-09",5,1325,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-09",5,725,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-09",7,840,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-09",7,665,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-09",7,315,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-09",5,700,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-09",2,116,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-09",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-09",6,150,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-09",6,324,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-09",3,480,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-09",3,630,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-09",3,795,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-09",3,435,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-09",5,600,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-09",5,475,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-09",5,225,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-09",3,420,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-09",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-09",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-10",6,150,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-10",6,324,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-10",3,480,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-10",3,630,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-10",3,795,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-10",3,435,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-10",5,600,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-10",5,475,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-10",5,225,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-10",3,420,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-10",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-10",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-10",5,125,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-10",5,270,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-10",2,320,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-10",2,420,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-10",2,530,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-10",2,290,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-10",4,480,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-10",4,380,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-10",4,180,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-10",2,280,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-10",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-10",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-11",5,125,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-11",5,270,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-11",2,320,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-11",2,420,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-11",2,530,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-11",2,290,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-11",4,480,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-11",4,380,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-11",4,180,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-11",2,280,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-11",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-11",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-11",6,150,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-11",6,324,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-11",3,480,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-11",3,630,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-11",3,795,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-11",3,435,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-11",5,600,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-11",5,475,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-11",5,225,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-11",3,420,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-11",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-11",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-12",6,150,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-12",6,324,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-12",3,480,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-12",3,630,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-12",3,795,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-12",3,435,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-12",5,600,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-12",5,475,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-12",5,225,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-12",3,420,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-12",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-12",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-12",8,200,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-12",8,432,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-12",5,800,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-12",5,1050,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-12",5,1325,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-12",5,725,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-12",7,840,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-12",7,665,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-12",7,315,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-12",5,700,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-12",2,116,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-12",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-13",8,200,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-13",8,432,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-13",5,800,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-13",5,1050,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-13",5,1325,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-13",5,725,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-13",7,840,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-13",7,665,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-13",7,315,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-13",5,700,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-13",2,116,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-13",1,115,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-13",9,225,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-13",9,486,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-13",6,960,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-13",6,1260,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-13",6,1590,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-13",6,870,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-13",8,960,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-13",8,760,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-13",8,360,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-13",6,840,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-13",3,174,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-13",1,115,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-14",9,225,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-14",9,486,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-14",6,960,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-14",6,1260,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-14",6,1590,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-14",6,870,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-14",8,960,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-14",8,760,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-14",8,360,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-14",6,840,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-14",3,174,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-14",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-14",8,200,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-14",8,432,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-14",5,800,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-14",5,1050,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-14",5,1325,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-14",5,725,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-14",7,840,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-14",7,665,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-14",7,315,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-14",5,700,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-14",2,116,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-14",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-15",8,200,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-15",8,432,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-15",5,800,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-15",5,1050,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-15",5,1325,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-15",5,725,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-15",7,840,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-15",7,665,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-15",7,315,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-15",5,700,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-15",2,116,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-15",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-15",6,150,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-15",6,324,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-15",3,480,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-15",3,630,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-15",3,795,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-15",3,435,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-15",5,600,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-15",5,475,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-15",5,225,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-15",3,420,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-15",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-15",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-16",6,150,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-16",6,324,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-16",3,480,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-16",3,630,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-16",3,795,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-16",3,435,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-16",5,600,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-16",5,475,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-16",5,225,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-16",3,420,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-16",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-16",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-16",5,125,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-16",5,270,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-16",2,320,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-16",2,420,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-16",2,530,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-16",2,290,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-16",4,480,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-16",4,380,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-16",4,180,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-16",2,280,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-16",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-16",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-17",5,125,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-17",5,270,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-17",2,320,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-17",2,420,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-17",2,530,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-17",2,290,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-17",4,480,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-17",4,380,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-17",4,180,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-17",2,280,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-17",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-17",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-17",5,125,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-17",5,270,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-17",2,320,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-17",2,420,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-17",2,530,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-17",2,290,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-17",4,480,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-17",4,380,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-17",4,180,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-17",2,280,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-17",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-17",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-18",5,125,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-18",5,270,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-18",2,320,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-18",2,420,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-18",2,530,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-18",2,290,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-18",4,480,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-18",4,380,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-18",4,180,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-18",2,280,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-18",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-18",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-18",7,175,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-18",7,378,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-18",4,640,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-18",4,840,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-18",4,1060,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-18",4,580,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-18",6,720,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-18",6,570,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-18",6,270,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-18",4,560,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-18",1,58,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-18",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-19",7,175,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-19",7,378,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-19",4,640,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-19",4,840,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-19",4,1060,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-19",4,580,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-19",6,720,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-19",6,570,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-19",6,270,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-19",4,560,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-19",1,58,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-19",1,115,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-19",9,225,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-19",9,486,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-19",6,960,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-19",6,1260,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-19",6,1590,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-19",6,870,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-19",8,960,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-19",8,760,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-19",8,360,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-19",6,840,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-19",3,174,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-19",1,115,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-20",9,225,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-20",9,486,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-20",6,960,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-20",6,1260,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-20",6,1590,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-20",6,870,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-20",8,960,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-20",8,760,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-20",8,360,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-20",6,840,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-20",3,174,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-20",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-20",9,225,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-20",9,486,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-20",6,960,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-20",6,1260,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-20",6,1590,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-20",6,870,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-20",8,960,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-20",8,760,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-20",8,360,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-20",6,840,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-20",3,174,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-20",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-21",9,225,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-21",9,486,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-21",6,960,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-21",6,1260,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-21",6,1590,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-21",6,870,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-21",8,960,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-21",8,760,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-21",8,360,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-21",6,840,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-21",3,174,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-21",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-21",7,175,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-21",7,378,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-21",4,640,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-21",4,840,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-21",4,1060,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-21",4,580,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-21",6,720,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-21",6,570,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-21",6,270,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-21",4,560,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-21",1,58,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-21",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-22",7,175,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-22",7,378,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-22",4,640,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-22",4,840,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-22",4,1060,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-22",4,580,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-22",6,720,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-22",6,570,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-22",6,270,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-22",4,560,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-22",1,58,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-22",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-22",5,125,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-22",5,270,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-22",2,320,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-22",2,420,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-22",2,530,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-22",2,290,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-22",4,480,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-22",4,380,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-22",4,180,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-22",2,280,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-22",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-22",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-23",5,125,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-23",5,270,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-23",2,320,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-23",2,420,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-23",2,530,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-23",2,290,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-23",4,480,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-23",4,380,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-23",4,180,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-23",2,280,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-23",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-23",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-23",5,125,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-23",5,270,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-23",2,320,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-23",2,420,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-23",2,530,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-23",2,290,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-23",4,480,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-23",4,380,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-23",4,180,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-23",2,280,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-23",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-23",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-24",5,125,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-24",5,270,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-24",2,320,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-24",2,420,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-24",2,530,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-24",2,290,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-24",4,480,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-24",4,380,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-24",4,180,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-24",2,280,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-24",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-24",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-24",7,175,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-24",7,378,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-24",4,640,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-24",4,840,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-24",4,1060,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-24",4,580,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-24",6,720,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-24",6,570,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-24",6,270,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-24",4,560,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-24",1,58,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-24",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-25",7,175,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-25",7,378,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-25",4,640,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-25",4,840,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-25",4,1060,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-25",4,580,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-25",6,720,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-25",6,570,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-25",6,270,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-25",4,560,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-25",1,58,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-25",1,115,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-25",9,225,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-25",9,486,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-25",6,960,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-25",6,1260,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-25",6,1590,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-25",6,870,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-25",8,960,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-25",8,760,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-25",8,360,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-25",6,840,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-25",3,174,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-25",1,115,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-26",9,225,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-26",9,486,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-26",6,960,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-26",6,1260,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-26",6,1590,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-26",6,870,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-26",8,960,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-26",8,760,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-26",8,360,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-26",6,840,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-26",3,174,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-26",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-26",9,225,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-26",9,486,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-26",6,960,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-26",6,1260,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-26",6,1590,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-26",6,870,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-26",8,960,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-26",8,760,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-26",8,360,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-26",6,840,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-26",3,174,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-26",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-27",9,225,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-27",9,486,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-27",6,960,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-27",6,1260,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-27",6,1590,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-27",6,870,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-27",8,960,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-27",8,760,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-27",8,360,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-27",6,840,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-27",3,174,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-27",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-27",8,200,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-27",8,432,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-27",5,800,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-27",5,1050,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-27",5,1325,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-27",5,725,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-27",7,840,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-27",7,665,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-27",7,315,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-27",5,700,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-27",2,116,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-27",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-28",8,200,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-28",8,432,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-28",5,800,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-28",5,1050,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-28",5,1325,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-28",5,725,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-28",7,840,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-28",7,665,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-28",7,315,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-28",5,700,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-28",2,116,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-28",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-28",6,150,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-28",6,324,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-28",3,480,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-28",3,630,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-28",3,795,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-28",3,435,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-28",5,600,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-28",5,475,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-28",5,225,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-28",3,420,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-28",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-28",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-29",6,150,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-29",6,324,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-29",3,480,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-29",3,630,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-29",3,795,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-29",3,435,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-29",5,600,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-29",5,475,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-29",5,225,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-29",3,420,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-29",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-29",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-29",5,125,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-29",5,270,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-29",2,320,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-29",2,420,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-29",2,530,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-29",2,290,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-29",4,480,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-29",4,380,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-29",4,180,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-29",2,280,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-29",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-29",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-30",5,125,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-30",5,270,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-30",2,320,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-30",2,420,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-30",2,530,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-30",2,290,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-30",4,480,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-30",4,380,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-30",4,180,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-30",2,280,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-30",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-30",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-30",6,150,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-30",6,324,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-30",3,480,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-30",3,630,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-30",3,795,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-30",3,435,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-30",5,600,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-30",5,475,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-30",5,225,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-30",3,420,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-30",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-30",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-05-31",6,150,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-05-31",6,324,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-05-31",3,480,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-05-31",3,630,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-05-31",3,795,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-05-31",3,435,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-05-31",5,600,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-05-31",5,475,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-05-31",5,225,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-05-31",3,420,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-05-31",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-05-31",1,115,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-05-31",8,200,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-05-31",8,432,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-05-31",5,800,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-05-31",5,1050,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-05-31",5,1325,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-05-31",5,725,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-05-31",7,840,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-05-31",7,665,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-05-31",7,315,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-05-31",5,700,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-05-31",2,116,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-05-31",1,115,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-06-01",8,200,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-06-01",8,432,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-06-01",5,800,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-06-01",5,1050,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-06-01",5,1325,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-06-01",5,725,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-06-01",7,840,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-06-01",7,665,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-06-01",7,315,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-06-01",5,700,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-06-01",2,116,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-06-01",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-06-01",9,225,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-06-01",9,486,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-06-01",6,960,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-06-01",6,1260,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-06-01",6,1590,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-06-01",6,870,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-06-01",8,960,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-06-01",8,760,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-06-01",8,360,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-06-01",6,840,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-06-01",3,174,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-06-01",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-06-02",9,225,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-06-02",9,486,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-06-02",6,960,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-06-02",6,1260,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-06-02",6,1590,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-06-02",6,870,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-06-02",8,960,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-06-02",8,760,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-06-02",8,360,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-06-02",6,840,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-06-02",3,174,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-06-02",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-06-02",8,200,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-06-02",8,432,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-06-02",5,800,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-06-02",5,1050,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-06-02",5,1325,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-06-02",5,725,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-06-02",7,840,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-06-02",7,665,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-06-02",7,315,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-06-02",5,700,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-06-02",2,116,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-06-02",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-06-03",8,200,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-06-03",8,432,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-06-03",5,800,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-06-03",5,1050,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-06-03",5,1325,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-06-03",5,725,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-06-03",7,840,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-06-03",7,665,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-06-03",7,315,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-06-03",5,700,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-06-03",2,116,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-06-03",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-06-03",6,150,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-06-03",6,324,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-06-03",3,480,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-06-03",3,630,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-06-03",3,795,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-06-03",3,435,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-06-03",5,600,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-06-03",5,475,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-06-03",5,225,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-06-03",3,420,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-06-03",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-06-03",0,0,40,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Downtown Superstore","2024-06-04",6,150,4,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Downtown Superstore","2024-06-04",6,324,6,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Downtown Superstore","2024-06-04",3,480,28,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Downtown Superstore","2024-06-04",3,630,22,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Downtown Superstore","2024-06-04",3,795,18,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Downtown Superstore","2024-06-04",3,435,32,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Downtown Superstore","2024-06-04",5,600,45,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Downtown Superstore","2024-06-04",22,2090,60,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Downtown Superstore","2024-06-04",5,225,40,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Downtown Superstore","2024-06-04",3,420,25,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Downtown Superstore","2024-06-04",0,0,300,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Downtown Superstore","2024-06-04",0,0,45,115,92,4,10
+"Aavin Toned Milk 500ml","AAV-MILK-500","Dairy","Westside Mall","2024-06-04",5,125,35,25,21,2,20
+"Nandini Full Cream Milk 1L","NAN-MILK-1000","Dairy","Westside Mall","2024-06-04",5,270,40,54,46,2,15
+"Tata Tea Gold 250g","TAT-TEA-250","Beverages","Westside Mall","2024-06-04",2,320,30,160,130,4,12
+"Bru Instant Coffee 100g","BRU-COF-100","Beverages","Westside Mall","2024-06-04",2,420,24,210,175,5,10
+"Aashirvaad Shudh Chakki Atta 5kg","AAS-ATTA-5KG","Staples","Westside Mall","2024-06-04",2,530,25,265,225,4,15
+"Fortune Sunlite Sunflower Oil 1L","FOR-OIL-1L","Staples","Westside Mall","2024-06-04",2,290,35,145,122,3,20
+"Parle-G Gold Biscuits 1kg","PAR-GLD-1KG","Snacks","Westside Mall","2024-06-04",4,480,50,120,95,3,15
+"Maggi 2-Minute Noodles 420g","MAG-NOD-420","Snacks","Westside Mall","2024-06-04",22,2090,70,95,78,3,25
+"Britannia Good Day Butter 200g","BRI-GDB-200","Snacks","Westside Mall","2024-06-04",4,180,42,45,36,3,20
+"Surf Excel Easy Wash 1kg","SRF-WSH-1KG","Household","Westside Mall","2024-06-04",2,280,28,140,115,5,12
+"Dettol Original Soap 125g","DET-SOP-125","Personal Care","Westside Mall","2024-06-04",0,0,280,58,46,4,15
+"Colgate Strong Teeth 200g","COL-PST-200","Personal Care","Westside Mall","2024-06-04",0,0,40,115,92,4,10

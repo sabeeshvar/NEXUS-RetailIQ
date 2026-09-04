@@ -55,8 +55,9 @@ export const App: React.FC = () => {
               <Route path="/stores" element={<StoresPage />} />
               <Route path="/alerts" element={<AlertsPage />} />
               <Route path="/recommendations" element={<RecommendationsPage />} />
-              <Route path="/import" element={<DataImportPage />} />
-              <Route path="/data-import" element={<Navigate to="/import" replace />} />
+              <Route path="/import-data" element={<DataImportPage />} />
+              <Route path="/import" element={<Navigate to="/import-data" replace />} />
+              <Route path="/data-import" element={<Navigate to="/import-data" replace />} />
               <Route path="/settings" element={<SettingsPage />} />
             </Route>
           </Route>

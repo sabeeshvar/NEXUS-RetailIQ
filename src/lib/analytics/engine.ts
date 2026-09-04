@@ -1,4 +1,4 @@
-import { Product, Sale, InventoryRecord, Alert, RecommendationAction, WhyExplanation, DashboardKPIs } from '../../types';
+import { Product, Sale, InventoryRecord, Alert, WhyExplanation, DashboardKPIs } from '../../types';
 
 export interface ProductMetricSummary {
   product: Product;
@@ -41,7 +41,15 @@ export class AnalyticsEngine {
     total30d: number;
     revenue30d: number;
   } {
-    const refDate = referenceDateStr ? new Date(referenceDateStr) : new Date();
+    let refDate: Date;
+    if (referenceDateStr) {
+      refDate = new Date(referenceDateStr);
+    } else if (sales.length > 0) {
+      const maxDateStr = sales.reduce((max, s) => s.date > max ? s.date : max, sales[0].date);
+      refDate = new Date(maxDateStr);
+    } else {
+      refDate = new Date();
+    }
     const productSales = sales.filter(
       s => s.productId === productId && (!storeId || s.storeId === storeId)
     );
@@ -574,7 +582,15 @@ export class AnalyticsEngine {
     storeId?: string,
     refDateStr?: string
   ): DashboardKPIs {
-    const refDate = refDateStr ? new Date(refDateStr) : new Date();
+    let refDate: Date;
+    if (refDateStr) {
+      refDate = new Date(refDateStr);
+    } else if (sales.length > 0) {
+      const maxDateStr = sales.reduce((max, s) => s.date > max ? s.date : max, sales[0].date);
+      refDate = new Date(maxDateStr);
+    } else {
+      refDate = new Date();
+    }
     const oneDayMs = 24 * 60 * 60 * 1000;
 
     let todayRevenue = 0;
