@@ -1,10 +1,50 @@
 import { CopilotMessage, CopilotIntent, CopilotMetric, WhyExplanation } from '../types';
 import { DataRepository } from './dataRepository';
 import { AnalyticsEngine } from '../lib/analytics/engine';
+import { GoogleGenAI } from '@google/genai';
 
 export interface CopilotQueryOptions {
   storeId?: string;
   userApiKey?: string;
+}
+
+async function callGemini(
+  prompt: string,
+  verifiedContext: string,
+  apiKey?: string
+): Promise<string | null> {
+  const key =
+    apiKey ||
+    localStorage.getItem('nexus_user_gemini_key') ||
+    import.meta.env.VITE_GEMINI_API_KEY;
+
+  if (!key) return null;
+
+  try {
+    const ai = new GoogleGenAI({ apiKey: key });
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.6-flash',
+      contents: `You are RetailIQ Copilot, an AI retail operations copilot assisting a store manager.
+MANDATORY OPERATIONAL RULES:
+1. You MUST NEVER fabricate or alter numbers.
+2. Quote and use ONLY the verified ground truth figures provided in the verified data context below.
+3. If the user asks for information outside this verified context, say: "I do not have enough data to answer that reliably."
+4. Structure your response with clean markdown:
+   - Direct concise executive answer
+   - Verified SKU numbers & current runways
+   - Clear prescriptive recommendation
+
+Manager's Question: "${prompt}"
+
+Verified Ground Truth Store Data:
+${verifiedContext}`,
+    });
+
+    return response.text || null;
+  } catch (err) {
+    console.warn('[RetailIQ Copilot] Gemini API error (gracefully falling back to deterministic template):', err);
+    return null;
+  }
 }
 
 export class CopilotService {
@@ -106,11 +146,17 @@ export class CopilotService {
         `${i + 1}. **${c.product.name}**\n   - Current Stock: **${c.currentStock} units**\n   - 7-Day Velocity: **${c.avgDailySales7d} units/day**\n   - Days Remaining: **${c.daysRemaining} days**\n   - Reorder Point: **${c.reorderPoint} units**\n   - Recommended Action: **Reorder ${c.recommendedReorderQty} units**`
       ).join('\n\n');
 
+      const verifiedContext = `Store Scope: ${storeName}
+Products Needing Attention / Reorder:
+${topCandidates.map(c => `- ${c.product.name} (${c.product.sku}): Stock = ${c.currentStock} units, 7d Velocity = ${c.avgDailySales7d}/day, Days Remaining = ${c.daysRemaining}d, Reorder Point = ${c.reorderPoint}, Recommended Reorder = ${c.recommendedReorderQty} units, Supplier Lead Time = ${c.product.leadTimeDays}d`).join('\n')}`;
+
+      const aiText = await callGemini(question, verifiedContext, options?.userApiKey);
+
       return {
         id: `copilot-${Date.now()}`,
         role: 'assistant',
         timestamp: new Date().toISOString(),
-        content: `### ${topCandidates.length} products require immediate replenishment\n\n${listText}`,
+        content: aiText || `### ${topCandidates.length} products require immediate replenishment\n\n${listText}`,
         intent: 'REORDER',
         numbers,
         evidence: `Analyzed POS inventory ledger and 7-day sales velocity across ${storeName}.`,
